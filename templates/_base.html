@@ -1,0 +1,343 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'fonts/Gilroy/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/parallax.js' %}"></script>
+
+
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg mainmenu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Об
+                                Уполномоченном</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="{% url 'management.list' %}">Руководство</a></li>
+                                <li><a href="static.html">Основные задачи и направления, права Уполномоченного</a></li>
+                                <li><a href="static.html">Структура аппарата Уполномоченного</a></li>
+                                <li><a href="news.html">Объявления</a></li>
+                                <li><a href="news.html">Награды</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Деятельность</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="static.html">Общая информация</a></li>
+                                <li><a href="static.html">Правовые основы деятельности</a></li>
+                                <li><a href="static.html">Обзор о проделанной работе</a></li>
+                                <li><a href="static.html">Результаты обращений</a></li>
+                                <li><a href="static.html">Деятельность комиссии по соблюдению прав и законных интересов субъектов предпринимательства</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Сотрудничество</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="static.html">Меморандумы о сотрудничестве</a></li>
+                                <li><a href="static.html">Сайты Омбудсменов по защите прав предпринимателей зарубежных стран</a></li>
+                                <li><a href="static.html">Зарубежные визиты</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Законодательство</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="static.html">Новое в законодательстве</a></li>
+                                <li><a href="static.html">Нормативно-правовые акты, регулирующие порядок проверок </a></li>
+                                <li><a href="static.html">База данных Lex.uz</a></li>
+                                <li><a href="static.html">Проекты актов законодательства</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Пресс служба</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">Пресс-релизы</a></li>
+                                <li><a href="#">Статьи</a></li>
+                                <li><a href="#">Фотогалерея</a></li>
+                                <li><a href="#">Видеогалерея</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+
+                    <div class="header-lang">
+                        <div class="language">
+                            <span><i class="fa fa-globe" aria-hidden="true"></i> Русский <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="banner-home">
+        <div class="bg"></div>
+        <div class="header-banner">
+            <div class="container">
+                <div class="banner-info">
+
+                    <div class="header-banner__main">
+                        <a href="#">
+                            <img src="images/logo.png" alt="">
+                        </a>
+                        <h2>Уполномоченный при Президенте Республики Узбекистан по защите прав и законных интересов субъектов предпринимательства</h2>
+
+                    </div>
+
+                </div>
+                <div class="header-socials">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                    <a href="#"><i class="fa fa-instagram"></i></a>
+                    <a href="#"><i class="fa fa-telegram"></i></a>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="banner-content">
+                    <div>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
+                        <span>Lorem ipsum dolor sit amet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-slider">
+            <video width="100%" height="100%" allowfullscreen autoplay muted loop>
+                <source src="{% static 'images/bg.mp4' %}" type="video/mp4" autoplay>
+            </video>
+            <!-- <div id="slider" class="owl-carousel">
+                <div class="item">
+                    <div class="slide-image scale-in" style="background-image: url(images/slide1.jpg)"></div>
+                </div>
+                <div class="item">
+                    <div class="slide-image scale-in" style="background-image: url(images/slide2.jpg)"></div>
+                </div>
+                <div class="item">
+                    <div class="slide-image scale-in" style="background-image: url(images/slide3.jpg)"></div>
+                </div>
+            </div> -->
+
+        </div>
+    </section>
+    <section class="home-services">
+        <div class="container">
+            <div class="services">
+                <div class="service-item">
+                    <article data-aos="fade-right" data-aos-delay="0">
+                        <img src="{% static 'images/1.svg' %}" alt="">
+                    </article>
+                    <h2>Services</h2>
+                    <span>Objective product and service reviews that can help you manage your business.</span>
+                </div>
+                <div class="service-item">
+                    <article data-aos="fade-down" data-aos-delay="200">
+                        <img src="{% static 'images/2.svg' %}" alt="">
+                    </article>
+                    <h2>Community</h2>
+                    <span>Business professionals like you connecting to share advice and overcome business challenges.</span>
+                </div>
+                <div class="service-item">
+                    <article data-aos="fade-up" data-aos-delay="400">
+                        <img src="{% static 'images/3.svg' %}" alt="">
+                    </article>
+                    <h2>Reviews</h2>
+                    <span>Objective product and service reviews that can help you manage your business.</span>
+                </div>
+                <div class="service-item">
+                    <article data-aos="fade-left" data-aos-delay="600">
+                        <img src="{% static 'images/4.svg' %}" alt="">
+                    </article>
+                    <h2>Articles</h2>
+                    <span>The resources you need to take your business and career to the next level.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="footer-logo">
+                            <img src="{% static 'images/logo.png' %}" alt="">
+                            <span>Уполномоченный при Президенте <br>
+                                    Республики Узбекистан по защите прав и законных <br>
+                                    интересов субъектов предпринимательства</span>
+                        </div>
+                        <div class="copy">
+                            <span>© 2019 Все права защищены</span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer-contact">
+                            <!-- <h2>Контакты</h2> -->
+                            <ul>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span>100011,г. Ташкент, ул.Навоий шох, дом 4 <br>
+                                                (бывшее здание Министерства сельского
+                                                и водного хозяйства Республики Узбекистан)</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>(+998) 71 239-25-03</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>info@biznesvakil.uz</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="footer-socials">
+                            <span>Мы в соц.сетях:</span>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    /*$("#slider").owlCarousel({
+        loop: true,
+        lazyLoad: true,
+        autoplay: true,
+        autoplayTimeout: 8000,
+        smartSpeed: 1000,
+        items: 1,
+        margin: 0,
+        dots: true,
+        nav: false,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+    });*/
+
+    $('#usefull').owlCarousel({
+        loop: true,
+        lazyLoad: true,
+        margin: 15,
+        dots: true,
+        nav: true,
+        navText: [
+            "<img src='{% static 'images/left.svg' %}' alt=''>",
+            "<img src='{% static 'images/right.svg' %}' alt=''>"
+        ],
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 800,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+    // $('.home-features').parallax({
+    //     positionX: center,
+    //     positionY: top
+    // });
+
+    AOS.init({
+        duration: 1000,
+    })
+</script>
+<script type="text/javascript">
+    var a = 0;
+    $(window).scroll(function () {
+
+        var oTop = $('#counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                        countNum: countTo
+                    },
+
+                    {
+
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                            //alert('finished');
+                        }
+
+                    });
+            });
+            a = 1;
+        }
+
+    });
+
+    $(document).ready(function () {
+        $('div.uzb path').click(function () {
+            let title = $(this).data('title')
+            console.log(title)
+            let title_top = $('span#title-top')
+            let title_bottom = $('h5#title-bottom')
+
+            title_top.text(title)
+            title_bottom.text(title)
+            $('div.uzb path').css({'fill': '#f2f2f2'})
+            $(this).css({'fill': '#000047'})
+        })
+        $('#UZ-JI').css({'fill': '#000047'})
+    });
+</script>
+</body>
+
+</html>
