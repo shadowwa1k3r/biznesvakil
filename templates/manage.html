@@ -1,18 +1,18 @@
 {% extends '_base.html' %}
-
+{% load static i18n %}
 {% block content %}
     <section class="banner-page" style="background-image: url(images/slide1.jpg)">
         <div class="bg"></div>
         <div class="page-banner">
             <div class="container">
                 <div class="page-banner__content">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="">
+                    <a href="{% url 'index' %}">
+                        <img src="{% static 'images/logo.png' %}" alt="">
                     </a>
-                    <h2>Уполномоченный при Президенте Республики Узбекистан по защите прав и законных интересов субъектов предпринимательства</h2>
+                    <h2>{% trans "Уполномоченный при Президенте Республики Узбекистан по защите прав и законных интересов субъектов предпринимательства"  %}</h2>
                 </div>
                 <div class="page-title">
-                    <h3>Руководство</h3>
+                    <h3>{% trans "Руководство" %}</h3>
                 </div>
             </div>
         </div>
@@ -29,12 +29,27 @@
                                     <img src="{{ management.photo.url }}" alt="foto">
                                 </article>
                                 <div class="guide-item__info">
-                                    <h2>{{ management.full_name_ru }}</h2>
+                                    {% if request.LANGUAGE_CODE == 'ru' %}
+                                                <h2>{{ management.full_name_ru }}</h2>
                                     <h3>{{ management.position_ru }}</h3>
-                                    <p><strong>Телефон:</strong> {{ management.phone }}</p>
-                                    <p><strong>Э-Почта:</strong> {{ management.email }}</p>
-                                    <p><strong>Дни приема:</strong>{{ management.receive_days_ru }}</p>
-                                    <button>Подробнее</button>
+                                    <p><strong>{% trans "Телефон" as phone %}:</strong> {{ management.phone }}</p>
+                                    <p><strong>{% trans "Э-Почта" as mail %}:</strong> {{ management.email }}</p>
+                                    <p><strong>{% trans "Дни приема" as days %}:</strong>{{ management.receive_days_ru }}</p>
+                                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                <h2>{{ management.full_name_uz }}</h2>
+                                    <h3>{{ management.position_uz }}</h3>
+                                    <p><strong>{{ phone }}:</strong> {{ management.phone }}</p>
+                                    <p><strong>{{mail}}:</strong> {{ management.email }}</p>
+                                    <p><strong>{{days}}:</strong>{{ management.receive_days_uz }}</p>
+                                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                                <h2>{{ management.full_name_en }}</h2>
+                                    <h3>{{ management.position_en }}</h3>
+                                    <p><strong>{{phone}}:</strong> {{ management.phone }}</p>
+                                    <p><strong>{{mail}}:</strong> {{ management.email }}</p>
+                                    <p><strong>{{days}}:</strong>{{ management.receive_days_en }}</p>
+                                            {% endif %}
+
+                                    <button>{% trans "Подробнее" %}</button>
                                 </div>
                             </div>
                         {% endfor %}
@@ -44,24 +59,24 @@
                 <div class="col-3">
                     <div class="side-banner">
                         <div class="side-menu">
-                            <h2>Пресс служба</h2>
-                            <ul>
-                                <li>
-                                    <a href="#" class="active">Новости</a>
-                                </li>
-                                <li>
-                                    <a href="#">Пресс-релизы</a>
-                                </li>
-                                <li>
-                                    <a href="#">Статьи</a>
-                                </li>
-                                <li>
-                                    <a href="#">Фотогалерея</a>
-                                </li>
-                                <li>
-                                    <a href="#">Видеогалерея</a>
-                                </li>
-                            </ul>
+                                                            <h2>{% trans "Пресс служба" %}</h2>
+                                <ul>
+                                    <li>
+                                        <a href="{% url 'news.list' %}" >{% trans "Новости" %}</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">{% trans "Пресс-релизы" %}</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">{% trans "Статьи" %}</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'gallery.list.photo' %}" >{% trans "Фотогалерея" %}</a>
+                                    </li>
+                                    <li>
+                                        <a href="{% url 'gallery.list.video' %}">{% trans "Видеогалерея" %}</a>
+                                    </li>
+                                </ul>
                         </div>
                         <!-- <div class="side-banner__item" data-aos="zoom-in-right">
                             <a href="#">
@@ -79,30 +94,7 @@
                                 <h2>Национальная <br>база данных законодательства</h2>
                             </a>
                         </div> -->
-                        <div class="side-quote">
-                            <div class="quote-title">
-                                <article>
-                                    <img src="images/vakil.jpg" alt="">
-                                </article>
-                                <div class="quote-title__info">
-                                    <h2>Касимов Дилмурод Султанмуротович</h2>
-                                    <span>Уполномоченный</span>
-                                </div>
-                            </div>
-                            <div class="quote-content">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, vero? Id hic illo voluptatibus est, amet, praesentium, totam maiores
-                                    aspernatur ratione commodi cum alias. Delectus perspiciatis nisi quasi laboriosam debitis!</p>
-                            </div>
-
-                        </div>
-                        <div class="side-year" data-aos="zoom-in">
-                            <article>
-                                <img src="images/banner.png" alt="">
-                            </article>
-                            <div class="side-year__title">
-                                2019 - Год активных инвестиций и социального развития
-                            </div>
-                        </div>
+                        {% include '_side_banner.html' %}
 
                     </div>
                 </div>

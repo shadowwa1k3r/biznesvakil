@@ -1854,3 +1854,48 @@ footer {
   }
   
   /* End Guide */
+
+/* Marquee */
+.marquee-main{
+    display: flex;
+    height: 60px;
+    background: #ffffff;
+    align-items: center;
+    width: 100%;
+    padding: 0 30px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 20px rgba(74, 74, 74, 0.2);
+}
+.marquee-title{
+    font-size: 21px;
+    font-weight: 600;
+    padding-right: 15px;
+    flex: 0 0 240px;
+    max-width: 240px;
+    color: #000047;
+    display: flex;
+    align-items: center;
+}
+.marquee-title > i.fa{
+    margin-right: 5px;
+}
+.marquee-content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.marquee-content ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+.marquee-content ul li {
+    margin: 0;
+    padding: 0 15px;
+    font-size: 18px;
+}
+.marquee-content ul li > strong {
+    margin-right: 5px;
+}

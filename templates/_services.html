@@ -1,0 +1,69 @@
+{% load static i18n %}
+<section class="home-services">
+        <div class="container">
+            <div class="services">
+                {% for foo in services %}
+                    <div class="service-item">
+                    <article data-aos="fade-right" data-aos-delay="{% widthratio forloop.counter 1 100 %}">
+                        <img src="{{ foo.image.url}}" alt="">
+                    </article>
+
+                        {% if request.LANGUAGE_CODE == 'ru' %}
+                            <h2>{{foo.title_ru}}</h2>
+
+                        <span>{{foo.description_ru}}</span>
+                        {% elif request.LANGUAGE_CODE == 'uz' %}
+                            <h2>{{foo.title_uz}}</h2>
+
+                        <span>{{foo.description_uz}}</span>
+                        {% elif request.LANGUAGE_CODE == 'en' %}
+                            <h2>{{foo.title_en}}</h2>
+
+                        <span>{{foo.description_en}}</span>
+                        {% endif %}
+
+                </div>
+                {% endfor %}
+
+
+{#                <div class="service-item">#}
+{#                    <article data-aos="fade-down" data-aos-delay="200">#}
+{#                        <img src="{% static 'images/2.svg' %}" alt="">#}
+{#                    </article>#}
+{#                    <h2>Community</h2>#}
+{#                    <span>Business professionals like you connecting to share advice and overcome business challenges.</span>#}
+{#                </div>#}
+{#                <div class="service-item">#}
+{#                    <article data-aos="fade-up" data-aos-delay="400">#}
+{#                        <img src="{% static 'images/3.svg' %}" alt="">#}
+{#                    </article>#}
+{#                    <h2>Reviews</h2>#}
+{#                    <span>Objective product and service reviews that can help you manage your business.</span>#}
+{#                </div>#}
+{#                <div class="service-item">#}
+{#                    <article data-aos="fade-left" data-aos-delay="600">#}
+{#                        <img src="{% static 'images/4.svg' %}" alt="">#}
+{#                    </article>#}
+{#                    <h2>Articles</h2>#}
+{#                    <span>The resources you need to take your business and career to the next level.</span>#}
+{#                </div>#}
+            </div>
+        <div class="marquee-main">
+                    <div class="marquee-title">
+                        <i class="fa fa-money" aria-hidden="true"></i>
+                        <span>{% trans "Lorem, ipsum dolor:"  %}</span>
+                    </div>
+                    <div class="marquee-content">
+                        <marquee>
+                            <ul>
+                                <li><strong>1 USD:</strong> 9500 UZS</li>
+                                <li><strong>1 RUB:</strong> 135 UZS</li>
+                                <li><strong>1 USD:</strong> 9500 UZS</li>
+                                <li><strong>1 RUB:</strong> 135 UZS</li>
+                            </ul>
+                        </marquee>
+                    </div>
+                </div>
+        </div>
+    </section>
+

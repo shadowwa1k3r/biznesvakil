@@ -1,4 +1,4 @@
-{% load static %}
+{% load static i18n %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,56 +38,56 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Об
-                                Уполномоченном</a>
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {% blocktrans %}Об
+                                Уполномоченном {%endblocktrans %}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="{% url 'management.list' %}">Руководство</a></li>
-                                <li><a href="static.html">Основные задачи и направления, права Уполномоченного</a></li>
-                                <li><a href="static.html">Структура аппарата Уполномоченного</a></li>
-                                <li><a href="news.html">Объявления</a></li>
-                                <li><a href="news.html">Награды</a></li>
+                                <li><a href="{% url 'management.list' %}">{% trans "Руководство" %}</a></li>
+                                <li><a href="static.html">{% trans "Основные задачи и направления, права Уполномоченного" %}</a></li>
+                                <li><a href="static.html">{% trans "Структура аппарата Уполномоченного" %}</a></li>
+                                <li><a href="news.html">{% trans "Объявления" %}</a></li>
+                                <li><a href="news.html">{% trans "Награды" %}</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Деятельность</a>
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Деятельность" %}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="static.html">Общая информация</a></li>
-                                <li><a href="static.html">Правовые основы деятельности</a></li>
-                                <li><a href="static.html">Обзор о проделанной работе</a></li>
-                                <li><a href="static.html">Результаты обращений</a></li>
-                                <li><a href="static.html">Деятельность комиссии по соблюдению прав и законных интересов субъектов предпринимательства</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">Сотрудничество</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="static.html">Меморандумы о сотрудничестве</a></li>
-                                <li><a href="static.html">Сайты Омбудсменов по защите прав предпринимателей зарубежных стран</a></li>
-                                <li><a href="static.html">Зарубежные визиты</a></li>
+                                <li><a href="static.html">{% trans "Общая информация" %}</a></li>
+                                <li><a href="static.html">{% trans "Правовые основы деятельности" %}</a></li>
+                                <li><a href="static.html">{% trans "Обзор о проделанной работе" %}</a></li>
+                                <li><a href="static.html">{% trans "Результаты обращений" %}</a></li>
+                                <li><a href="static.html">{% trans "Деятельность комиссии по соблюдению прав и законных интересов субъектов предпринимательства" %}</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">Законодательство</a>
+                               aria-expanded="false">{% trans "Сотрудничество" %}</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="static.html">Новое в законодательстве</a></li>
-                                <li><a href="static.html">Нормативно-правовые акты, регулирующие порядок проверок </a></li>
-                                <li><a href="static.html">База данных Lex.uz</a></li>
-                                <li><a href="static.html">Проекты актов законодательства</a></li>
+                                <li><a href="static.html">{% trans "Меморандумы о сотрудничестве" %}</a></li>
+                                <li><a href="static.html">{% trans "Сайты Омбудсменов по защите прав предпринимателей зарубежных стран" %}</a></li>
+                                <li><a href="static.html">{% trans "Зарубежные визиты" %}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">{% trans "Законодательство" %}</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="static.html">{% trans "Новое в законодательстве" %}</a></li>
+                                <li><a href="static.html">{% trans "Нормативно-правовые акты, регулирующие порядок проверок " %}</a></li>
+                                <li><a href="static.html">{% trans "База данных Lex.uz" %}</a></li>
+                                <li><a href="static.html">{% trans "Проекты актов законодательства" %}</a></li>
                             </ul>
                         </li>
                         <li class="dropdown">
                             <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Пресс служба</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="#">Новости</a></li>
-                                <li><a href="#">Пресс-релизы</a></li>
-                                <li><a href="#">Статьи</a></li>
-                                <li><a href="#">Фотогалерея</a></li>
-                                <li><a href="#">Видеогалерея</a></li>
+                                <li><a href="{% url 'news.list' %}">{% trans "Новости" %}</a></li>
+                                <li><a href="#">{% trans "Пресс-релизы" %}</a></li>
+                                <li><a href="#">{% trans "Статьи" %}</a></li>
+                                <li><a href="{% url 'gallery.list.photo' %}">{% trans "Фотогалерея" %}</a></li>
+                                <li><a href="{% url 'gallery.list.video' %}">{% trans "Видеогалерея" %}</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">{% trans "Контакты" %}</a></li>
                     </ul>
 
                     <div class="header-lang">
@@ -100,88 +100,8 @@
         </div>
     </header>
 
-    <section class="banner-home">
-        <div class="bg"></div>
-        <div class="header-banner">
-            <div class="container">
-                <div class="banner-info">
 
-                    <div class="header-banner__main">
-                        <a href="#">
-                            <img src="images/logo.png" alt="">
-                        </a>
-                        <h2>Уполномоченный при Президенте Республики Узбекистан по защите прав и законных интересов субъектов предпринимательства</h2>
 
-                    </div>
-
-                </div>
-                <div class="header-socials">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-telegram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                </div>
-                <div class="banner-content">
-                    <div>
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h2>
-                        <span>Lorem ipsum dolor sit amet</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="banner-slider">
-            <video width="100%" height="100%" allowfullscreen autoplay muted loop>
-                <source src="{% static 'images/bg.mp4' %}" type="video/mp4" autoplay>
-            </video>
-            <!-- <div id="slider" class="owl-carousel">
-                <div class="item">
-                    <div class="slide-image scale-in" style="background-image: url(images/slide1.jpg)"></div>
-                </div>
-                <div class="item">
-                    <div class="slide-image scale-in" style="background-image: url(images/slide2.jpg)"></div>
-                </div>
-                <div class="item">
-                    <div class="slide-image scale-in" style="background-image: url(images/slide3.jpg)"></div>
-                </div>
-            </div> -->
-
-        </div>
-    </section>
-    <section class="home-services">
-        <div class="container">
-            <div class="services">
-                <div class="service-item">
-                    <article data-aos="fade-right" data-aos-delay="0">
-                        <img src="{% static 'images/1.svg' %}" alt="">
-                    </article>
-                    <h2>Services</h2>
-                    <span>Objective product and service reviews that can help you manage your business.</span>
-                </div>
-                <div class="service-item">
-                    <article data-aos="fade-down" data-aos-delay="200">
-                        <img src="{% static 'images/2.svg' %}" alt="">
-                    </article>
-                    <h2>Community</h2>
-                    <span>Business professionals like you connecting to share advice and overcome business challenges.</span>
-                </div>
-                <div class="service-item">
-                    <article data-aos="fade-up" data-aos-delay="400">
-                        <img src="{% static 'images/3.svg' %}" alt="">
-                    </article>
-                    <h2>Reviews</h2>
-                    <span>Objective product and service reviews that can help you manage your business.</span>
-                </div>
-                <div class="service-item">
-                    <article data-aos="fade-left" data-aos-delay="600">
-                        <img src="{% static 'images/4.svg' %}" alt="">
-                    </article>
-                    <h2>Articles</h2>
-                    <span>The resources you need to take your business and career to the next level.</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     {% block content %}
 
@@ -194,12 +114,12 @@
                     <div class="col-5">
                         <div class="footer-logo">
                             <img src="{% static 'images/logo.png' %}" alt="">
-                            <span>Уполномоченный при Президенте <br>
-                                    Республики Узбекистан по защите прав и законных <br>
-                                    интересов субъектов предпринимательства</span>
+                            <span>{% trans "Уполномоченный при Президенте" %} <br>
+                                    {% trans "Республики Узбекистан по защите прав и законных" %} <br>
+                                    {% trans "интересов субъектов предпринимательства" %}</span>
                         </div>
                         <div class="copy">
-                            <span>© 2019 Все права защищены</span>
+                            <span>© 2019 {% trans "Все права защищены" %}</span>
                         </div>
                     </div>
                     <div class="col-4">
@@ -208,9 +128,11 @@
                             <ul>
                                 <li>
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <span>100011,г. Ташкент, ул.Навоий шох, дом 4 <br>
-                                                (бывшее здание Министерства сельского
-                                                и водного хозяйства Республики Узбекистан)</span>
+                                    <span>{% trans "100011,г. Ташкент, ул.Навоий шох, дом 4 " %}<br>
+                                                {% blocktrans %}(бывшее здание Министерства сельского
+                                                и водного хозяйства Республики Узбекистан)
+                                        {% endblocktrans %}
+                                    </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
@@ -225,7 +147,7 @@
                     </div>
                     <div class="col-3">
                         <div class="footer-socials">
-                            <span>Мы в соц.сетях:</span>
+                            <span>{% trans "Мы в соц.сетях:" %}</span>
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-telegram"></i></a>

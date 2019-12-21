@@ -1,0 +1,268 @@
+
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'fonts/Gilroy/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/media.css' %}">
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/parallax.js' %}"></script>
+
+
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-light navbar-expand-lg mainmenu">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {% blocktrans %}Об
+                                Уполномоченном {%endblocktrans %}</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="{% url 'management.list' %}">{% trans "Руководство" %}</a></li>
+                                <li><a href="static.html">{% trans "Основные задачи и направления, права Уполномоченного" %}</a></li>
+                                <li><a href="static.html">{% trans "Структура аппарата Уполномоченного" %}</a></li>
+                                <li><a href="news.html">{% trans "Объявления" %}</a></li>
+                                <li><a href="news.html">{% trans "Награды" %}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Деятельность" %}</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="static.html">{% trans "Общая информация" %}</a></li>
+                                <li><a href="static.html">{% trans "Правовые основы деятельности" %}</a></li>
+                                <li><a href="static.html">{% trans "Обзор о проделанной работе" %}</a></li>
+                                <li><a href="static.html">{% trans "Результаты обращений" %}</a></li>
+                                <li><a href="static.html">{% trans "Деятельность комиссии по соблюдению прав и законных интересов субъектов предпринимательства" %}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">{% trans "Сотрудничество" %}</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="static.html">{% trans "Меморандумы о сотрудничестве" %}</a></li>
+                                <li><a href="static.html">{% trans "Сайты Омбудсменов по защите прав предпринимателей зарубежных стран" %}</a></li>
+                                <li><a href="static.html">{% trans "Зарубежные визиты" %}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">{% trans "Законодательство" %}</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="static.html">{% trans "Новое в законодательстве" %}</a></li>
+                                <li><a href="static.html">{% trans "Нормативно-правовые акты, регулирующие порядок проверок " %}</a></li>
+                                <li><a href="static.html">{% trans "База данных Lex.uz" %}</a></li>
+                                <li><a href="static.html">{% trans "Проекты актов законодательства" %}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Пресс служба</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a href="{% url 'news.list' %}">{% trans "Новости" %}</a></li>
+                                <li><a href="#">{% trans "Пресс-релизы" %}</a></li>
+                                <li><a href="#">{% trans "Статьи" %}</a></li>
+                                <li><a href="{% url 'gallery.list.photo' %}">{% trans "Фотогалерея" %}</a></li>
+                                <li><a href="{% url 'gallery.list.video' %}">{% trans "Видеогалерея" %}</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">{% trans "Контакты" %}</a></li>
+                    </ul>
+
+                    <div class="header-lang">
+                        <div class="language">
+                            <span><i class="fa fa-globe" aria-hidden="true"></i> Русский <i class="fa fa-angle-down" aria-hidden="true"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+{% include '_banner.html' %}
+    {% include '_services.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    <footer>
+        <div class="container">
+            <div class="footer-main">
+                <div class="row">
+                    <div class="col-5">
+                        <div class="footer-logo">
+                            <img src="{% static 'images/logo.png' %}" alt="">
+                            <span>{% trans "Уполномоченный при Президенте" %} <br>
+                                    {% trans "Республики Узбекистан по защите прав и законных" %} <br>
+                                    {% trans "интересов субъектов предпринимательства" %}</span>
+                        </div>
+                        <div class="copy">
+                            <span>© 2019 {% trans "Все права защищены" %}</span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="footer-contact">
+                            <!-- <h2>Контакты</h2> -->
+                            <ul>
+                                <li>
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <span>{% trans "100011,г. Ташкент, ул.Навоий шох, дом 4 " %}<br>
+                                                {% blocktrans %}(бывшее здание Министерства сельского
+                                                и водного хозяйства Республики Узбекистан)
+                                        {% endblocktrans %}
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>(+998) 71 239-25-03</span>
+                                </li>
+                                <li>
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>info@biznesvakil.uz</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="footer-socials">
+                            <span>{% trans "Мы в соц.сетях:" %}</span>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-telegram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    /*$("#slider").owlCarousel({
+        loop: true,
+        lazyLoad: true,
+        autoplay: true,
+        autoplayTimeout: 8000,
+        smartSpeed: 1000,
+        items: 1,
+        margin: 0,
+        dots: true,
+        nav: false,
+        animateIn: 'fadeIn',
+        animateOut: 'fadeOut',
+    });*/
+
+    $('#usefull').owlCarousel({
+        loop: true,
+        lazyLoad: true,
+        margin: 15,
+        dots: true,
+        nav: true,
+        navText: [
+            "<img src='{% static 'images/left.svg' %}' alt=''>",
+            "<img src='{% static 'images/right.svg' %}' alt=''>"
+        ],
+        autoplay: true,
+        autoplayTimeout: 4000,
+        smartSpeed: 800,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+    // $('.home-features').parallax({
+    //     positionX: center,
+    //     positionY: top
+    // });
+
+    AOS.init({
+        duration: 1000,
+    })
+</script>
+<script type="text/javascript">
+    var a = 0;
+    $(window).scroll(function () {
+
+        var oTop = $('#counter').offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() > oTop) {
+            $('.counter-value').each(function () {
+                var $this = $(this),
+                    countTo = $this.attr('data-count');
+                $({
+                    countNum: $this.text()
+                }).animate({
+                        countNum: countTo
+                    },
+
+                    {
+
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function () {
+                            $this.text(Math.floor(this.countNum));
+                        },
+                        complete: function () {
+                            $this.text(this.countNum);
+                            //alert('finished');
+                        }
+
+                    });
+            });
+            a = 1;
+        }
+
+    });
+
+    $(document).ready(function () {
+        $('div.uzb path').click(function () {
+            let title = $(this).data('title')
+            console.log(title)
+            let title_top = $('span#title-top')
+            let title_bottom = $('h5#title-bottom')
+
+            title_top.text(title)
+            title_bottom.text(title)
+            $('div.uzb path').css({'fill': '#f2f2f2'})
+            $(this).css({'fill': '#000047'})
+        })
+        $('#UZ-JI').css({'fill': '#000047'})
+    });
+</script>
+</body>
+
+</html>
