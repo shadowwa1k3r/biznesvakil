@@ -48,9 +48,9 @@
 
                                 <div id="viewSlider" class="owl-carousel">
                                 {% for file in new.newsfiles_set.all %}
-                                    <div class="item">
+                                    <a data-fancybox="gallery" href="{{ file.image.url }}" class="item">
                                         <img src="{{ file.image.url }}" alt="">
-                                    </div>
+                                    </a>
                                 {% endfor %}
 
                                 </div>

@@ -26,8 +26,8 @@
                             <div class="main-row">
                                 {% for video in videos %}
                                     <div class="main-col-6">
-                                    <a href="#" class="gallery-item" data-aos="flip-up" data-aos-delay="100">
-                                        <article href="{{ video.video.url }}" >
+                                    <a data-fancybox="gallery" href="{{ video.video.url }}" class="gallery-item" data-aos="flip-up" data-aos-delay="100">
+                                        <article  >
 
                                                 <img src="{{ video.cover.url }}" alt="">
 

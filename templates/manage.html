@@ -29,25 +29,24 @@
                                     <img src="{{ management.photo.url }}" alt="foto">
                                 </article>
                                 <div class="guide-item__info">
+
                                     {% if request.LANGUAGE_CODE == 'ru' %}
                                                 <h2>{{ management.full_name_ru }}</h2>
-                                    <h3>{{ management.position_ru }}</h3>
-                                    <p><strong>{% trans "Телефон" as phone %}:</strong> {{ management.phone }}</p>
-                                    <p><strong>{% trans "Э-Почта" as mail %}:</strong> {{ management.email }}</p>
-                                    <p><strong>{% trans "Дни приема" as days %}:</strong>{{ management.receive_days_ru }}</p>
-                                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                <h3>{{ management.position_ru }}</h3>
+
+
+                                                <p><strong>{% trans "Дни приема" %}: </strong>{{ management.receive_days_ru }}</p>
+                                    {% elif request.LANGUAGE_CODE == 'uz' %}
                                                 <h2>{{ management.full_name_uz }}</h2>
-                                    <h3>{{ management.position_uz }}</h3>
-                                    <p><strong>{{ phone }}:</strong> {{ management.phone }}</p>
-                                    <p><strong>{{mail}}:</strong> {{ management.email }}</p>
-                                    <p><strong>{{days}}:</strong>{{ management.receive_days_uz }}</p>
-                                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                                <h3>{{ management.position_uz }}</h3>
+                                                <p><strong>{% trans "Дни приема" %}: </strong>{{ management.receive_days_uz }}</p>
+                                    {% elif request.LANGUAGE_CODE == 'en' %}
                                                 <h2>{{ management.full_name_en }}</h2>
-                                    <h3>{{ management.position_en }}</h3>
-                                    <p><strong>{{phone}}:</strong> {{ management.phone }}</p>
-                                    <p><strong>{{mail}}:</strong> {{ management.email }}</p>
-                                    <p><strong>{{days}}:</strong>{{ management.receive_days_en }}</p>
-                                            {% endif %}
+                                                <h3>{{ management.position_en }}</h3>
+                                                <p><strong>{% trans "Дни приема" %}: </strong>{{ management.receive_days_en }}</p>
+                                    {% endif %}
+                                <p><strong>{% trans "Телефон" %}:</strong> {{ management.phone }}</p>
+                                    <p><strong>{% trans "Э-Почта" %}:</strong> {{ management.email }}</p>
 
                                     <button>{% trans "Подробнее" %}</button>
                                 </div>
