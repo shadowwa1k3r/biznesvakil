@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-21 19:40+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: templates/_banner.html:12 templates/gallery.html:12 templates/manage.html:12
+#: templates/news.html:20 templates/news_view.html:15 templates/video.html:12
+msgid ""
+"Уполномоченный при Президенте Республики Узбекистан по защите прав и "
+"законных интересов субъектов предпринимательства"
+msgstr ""
+
+#: templates/_banner.html:26
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+"tempor incididunt ut labore et dolore magna aliqua."
+msgstr ""
+
+#: templates/_banner.html:27
+msgid "Lorem ipsum dolor sit amet"
+msgstr ""
+
+#: templates/_base.html:44 templates/_main_base.html:44
+msgid ""
+"Об\n"
+"                                Уполномоченном "
+msgstr ""
+
+#: templates/_base.html:47 templates/_main_base.html:47
+#: templates/manage.html:15
+msgid "Руководство"
+msgstr ""
+
+#: templates/_base.html:48 templates/_main_base.html:48
+msgid "Основные задачи и направления, права Уполномоченного"
+msgstr ""
+
+#: templates/_base.html:49 templates/_main_base.html:49
+msgid "Структура аппарата Уполномоченного"
+msgstr ""
+
+#: templates/_base.html:50 templates/_main_base.html:50
+msgid "Объявления"
+msgstr ""
+
+#: templates/_base.html:51 templates/_main_base.html:51
+msgid "Награды"
+msgstr ""
+
+#: templates/_base.html:55 templates/_main_base.html:55
+msgid "Деятельность"
+msgstr ""
+
+#: templates/_base.html:57 templates/_main_base.html:57
+msgid "Общая информация"
+msgstr ""
+
+#: templates/_base.html:58 templates/_main_base.html:58
+msgid "Правовые основы деятельности"
+msgstr ""
+
+#: templates/_base.html:59 templates/_main_base.html:59
+msgid "Обзор о проделанной работе"
+msgstr ""
+
+#: templates/_base.html:60 templates/_main_base.html:60
+msgid "Результаты обращений"
+msgstr ""
+
+#: templates/_base.html:61 templates/_main_base.html:61
+msgid ""
+"Деятельность комиссии по соблюдению прав и законных интересов субъектов "
+"предпринимательства"
+msgstr ""
+
+#: templates/_base.html:66 templates/_main_base.html:66
+msgid "Сотрудничество"
+msgstr ""
+
+#: templates/_base.html:68 templates/_main_base.html:68
+msgid "Меморандумы о сотрудничестве"
+msgstr ""
+
+#: templates/_base.html:69 templates/_main_base.html:69
+msgid "Сайты Омбудсменов по защите прав предпринимателей зарубежных стран"
+msgstr ""
+
+#: templates/_base.html:70 templates/_main_base.html:70
+msgid "Зарубежные визиты"
+msgstr ""
+
+#: templates/_base.html:75 templates/_main_base.html:75
+msgid "Законодательство"
+msgstr ""
+
+#: templates/_base.html:77 templates/_main_base.html:77
+msgid "Новое в законодательстве"
+msgstr ""
+
+#: templates/_base.html:78 templates/_main_base.html:78
+msgid "Нормативно-правовые акты, регулирующие порядок проверок "
+msgstr ""
+
+#: templates/_base.html:79 templates/_main_base.html:79
+msgid "База данных Lex.uz"
+msgstr ""
+
+#: templates/_base.html:80 templates/_main_base.html:80
+msgid "Проекты актов законодательства"
+msgstr ""
+
+#: templates/_base.html:86 templates/_main_base.html:86
+#: templates/gallery.html:102 templates/manage.html:64 templates/news.html:23
+#: templates/news.html:70 templates/news_view.html:18
+#: templates/news_view.html:91 templates/video.html:66
+msgid "Новости"
+msgstr ""
+
+#: templates/_base.html:87 templates/_main_base.html:87
+#: templates/gallery.html:105 templates/manage.html:67 templates/news.html:73
+#: templates/news_view.html:94 templates/video.html:69
+msgid "Пресс-релизы"
+msgstr ""
+
+#: templates/_base.html:88 templates/_main_base.html:88
+#: templates/gallery.html:108 templates/manage.html:70 templates/news.html:76
+#: templates/news_view.html:97 templates/video.html:72
+msgid "Статьи"
+msgstr ""
+
+#: templates/_base.html:89 templates/_main_base.html:89
+#: templates/gallery.html:15 templates/gallery.html:111
+#: templates/manage.html:73 templates/news.html:79 templates/news_view.html:100
+#: templates/video.html:75
+msgid "Фотогалерея"
+msgstr ""
+
+#: templates/_base.html:90 templates/_main_base.html:90
+#: templates/gallery.html:114 templates/manage.html:76 templates/news.html:82
+#: templates/news_view.html:103 templates/video.html:15 templates/video.html:78
+msgid "Видеогалерея"
+msgstr ""
+
+#: templates/_base.html:93 templates/_main_base.html:93
+msgid "Контакты"
+msgstr ""
+
+#: templates/_base.html:120 templates/_main_base.html:122
+msgid "Уполномоченный при Президенте"
+msgstr ""
+
+#: templates/_base.html:121 templates/_main_base.html:123
+msgid "Республики Узбекистан по защите прав и законных"
+msgstr ""
+
+#: templates/_base.html:122 templates/_main_base.html:124
+msgid "интересов субъектов предпринимательства"
+msgstr ""
+
+#: templates/_base.html:125 templates/_main_base.html:127
+msgid "Все права защищены"
+msgstr ""
+
+#: templates/_base.html:134 templates/_main_base.html:136
+msgid "100011,г. Ташкент, ул.Навоий шох, дом 4 "
+msgstr ""
+
+#: templates/_base.html:135 templates/_main_base.html:137
+msgid ""
+"(бывшее здание Министерства сельского\n"
+"                                                и водного хозяйства "
+"Республики Узбекистан)\n"
+"                                        "
+msgstr ""
+
+#: templates/_base.html:153 templates/_main_base.html:155
+msgid "Мы в соц.сетях:"
+msgstr ""
+
+#: templates/_services.html:54
+msgid "Lorem, ipsum dolor:"
+msgstr ""
+
+#: templates/_side_banner.html:8
+msgid "Касимов Дилмурод Султанмуротович"
+msgstr ""
+
+#: templates/_side_banner.html:9
+msgid "Уполномоченный"
+msgstr ""
+
+#: templates/_side_banner.html:13
+msgid ""
+"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, vero? Id "
+"hic illo voluptatibus est, amet, praesentium, totam maiores aspernatur "
+"ratione commodi cum alias. Delectus perspiciatis nisi quasi laboriosam "
+"debitis!"
+msgstr ""
+
+#: templates/_side_banner.html:22 templates/index.html:84
+msgid "2019 - Год активных инвестиций и социального развития"
+msgstr ""
+
+#: templates/gallery.html:99 templates/manage.html:61 templates/news.html:67
+#: templates/news_view.html:88 templates/video.html:63
+msgid "Пресс служба"
+msgstr ""
+
+#: templates/index.html:11
+msgid "Последние новости"
+msgstr ""
+
+#: templates/index.html:12
+msgid "Все новости"
+msgstr ""
+
+#: templates/index.html:92
+msgid "Государственные символы"
+msgstr ""
+
+#: templates/index.html:100
+msgid "Национальная"
+msgstr ""
+
+#: templates/index.html:100
+msgid "база данных законодательства"
+msgstr ""
+
+#: templates/index.html:115
+msgid "ABOUT HALE BUSINESS CENTRE"
+msgstr ""
+
+#: templates/index.html:116
+msgid "Our passion and your future combined together"
+msgstr ""
+
+#: templates/index.html:119
+msgid ""
+"\n"
+"                                We believe in taking a genuine interest in "
+"the growth and success of your business, after all if your success means we "
+"are doing something right! To\n"
+"                                this end, our focus is on providing business "
+"solutions to help you save time and money, allowing you vital portability "
+"and flexibility to do\n"
+"                                business.\n"
+"                                "
+msgstr ""
+
+#: templates/index.html:125
+msgid ""
+"\n"
+"                                Hale Business Centre was created to offer a "
+"personalised and flexible office solution to businesses around the city. By "
+"carefully designing our\n"
+"                                offices locations to maximise light and "
+"natural ventilation, we’ve created modern offices built to meet the demands "
+"of the modern business\n"
+"                                workplace.\n"
+"                                "
+msgstr ""
+
+#: templates/index.html:133
+msgid "More About Us"
+msgstr ""
+
+#: templates/index.html:134
+msgid "Contact Us"
+msgstr ""
+
+#: templates/index.html:155
+msgid "Our simple process"
+msgstr ""
+
+#: templates/index.html:156
+msgid ""
+"We like to keep things simple – that’s why our contracts are short and "
+"sweet. As soon as you’ve signed and paid, we’ll hand over the keys!"
+msgstr ""
+
+#: templates/index.html:162
+msgid "Contact."
+msgstr ""
+
+#: templates/index.html:169
+msgid "View."
+msgstr ""
+
+#: templates/index.html:175
+msgid "Sign."
+msgstr ""
+
+#: templates/index.html:181
+msgid "Move."
+msgstr ""
+
+#: templates/index.html:299
+msgid "Фото"
+msgstr ""
+
+#: templates/index.html:300
+msgid "Все фото"
+msgstr ""
+
+#: templates/index.html:392
+msgid "Видео"
+msgstr ""
+
+#: templates/index.html:393
+msgid "Все видео"
+msgstr ""
+
+#: templates/index.html:434 templates/index.html:474
+msgid "Мирзо Улугбекский Инновационный Центр"
+msgstr ""
+
+#: templates/index.html:444
+msgid "Национальное агентство проектного управления при президенте РУз"
+msgstr ""
+
+#: templates/index.html:454
+msgid ""
+"Республиканская высшая школа бизнеса и управления имени Абу Райхана Беруни"
+msgstr ""
+
+#: templates/index.html:464
+msgid "Единая система идентификации"
+msgstr ""
+
+#: templates/manage.html:38 templates/manage.html:42 templates/manage.html:46
+msgid "Дни приема"
+msgstr ""
+
+#: templates/manage.html:48
+msgid "Телефон"
+msgstr ""
+
+#: templates/manage.html:49
+msgid "Э-Почта"
+msgstr ""
+
+#: templates/manage.html:51
+msgid "Подробнее"
+msgstr ""
+
+#: templates/news_view.html:70
+msgid "Поделиться"
+msgstr ""
