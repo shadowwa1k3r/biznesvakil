@@ -11,8 +11,13 @@ body {
 .title {
     width: 100%;
     padding: 15px 0;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     justify-content: space-between;
 }
 
@@ -32,11 +37,14 @@ body {
 }
 
 .main-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+flex-wrap: wrap;
     margin-right: -7.5px;
     margin-left: -7.5px;
 }
@@ -118,15 +126,25 @@ header {
     top: 0;
     left: 0;
     z-index: 1;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 
 .header-menu {
     width: 100%;
     height: 125px;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -158,8 +176,13 @@ header {
     height: 60px;
     padding: 15px 25px;
     text-decoration: none;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 
 .mainmenu ul.navbar-nav ul.dropdown-menu li>a {
@@ -237,6 +260,10 @@ header {
 }
 
 .header-socials {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     justify-content: center;
     padding: 40px 0;
@@ -283,6 +310,10 @@ header {
 
 .banner-info {
     width: 100%;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     justify-content: center;
 }
@@ -336,8 +367,13 @@ header {
 
 .banner-content {
     padding: 220px 0;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     justify-content: center;
     display: none;
 }
@@ -384,17 +420,31 @@ header {
 
 .home-services .services {
     width: 100%;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     box-shadow: 0px 4px 20px rgba(74, 74, 74, 0.2);
     background-color: #FFFFFF;
     background-image: none;
+    overflow: hidden;
 }
 
 .home-services .services .service-item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    -webkit-flex: 0 0 25%;
     flex: 0 0 25%;
     min-width: 25%;
     height: 325px;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     flex-direction: column;
     padding: 40px 30px;
@@ -491,6 +541,10 @@ header {
     left: 0;
     padding: 20px;
     z-index: 1;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -564,6 +618,10 @@ header {
 
 .home-news__bottom .home-news__item .home-news__title {
     z-index: 1;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -589,7 +647,11 @@ header {
     font-weight: 500;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
     max-height: 65px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -639,6 +701,10 @@ header {
 .news-banner .news-banner__item {}
 
 .news-banner .news-banner__item a {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     width: 100%;
     height: 120px;
@@ -650,7 +716,8 @@ header {
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
     text-decoration: none;
     margin-bottom: 15px;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 
 .news-banner .news-banner__item article {
@@ -802,7 +869,12 @@ header {
 
 .features-main .features {
     width: 100%;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
+    -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     padding: 60px 0 15px;
 }
@@ -812,6 +884,10 @@ header {
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     min-width: 25%;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -823,7 +899,8 @@ header {
     /*border: 2px solid #ffffff;*/
     /*border-radius: 8px;*/
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     margin: 0 auto;
     color: #ffffff;
     font-size: 56px;
@@ -1090,8 +1167,13 @@ header {
 .usefull-item {
     width: 100%;
     height: 130px;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     border-radius: 4px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
@@ -1102,8 +1184,13 @@ header {
 .usefull-item .usefull-item__image {
     flex: 0 0 110px;
     padding: 0 15px;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     justify-content: center;
 }
 
@@ -1177,6 +1264,10 @@ header {
 }
 .map-content {
     position: relative;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
 }
 .uzb path {
@@ -1208,8 +1299,13 @@ footer {
 .footer-main {}
 
 .footer-logo {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     cursor: pointer;
 }
 
@@ -1239,6 +1335,10 @@ footer {
 .footer-contact>ul li {
     font-size: 16px;
     color: #ffffff;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     padding: 5px 0;
 }
@@ -1256,8 +1356,13 @@ footer {
 }
 
 .footer-socials {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     justify-content: flex-end;
 }
 
@@ -1297,6 +1402,10 @@ footer {
 .page-banner{
     position: relative;
     width: 100%;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     align-items: flex-end;
     height: 100%;
@@ -1387,6 +1496,10 @@ footer {
 
 .all-news .news-item .news-item__title {
     z-index: 1;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1412,7 +1525,11 @@ footer {
     font-weight: 500;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
+    display: flex;
     max-height: 65px;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -1454,6 +1571,10 @@ footer {
 .side-banner .side-banner__item {}
 
 .side-banner .side-banner__item a {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     width: 100%;
     height: 120px;
@@ -1465,7 +1586,8 @@ footer {
     box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .1);
     text-decoration: none;
     margin-bottom: 15px;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 
 .side-banner .side-banner__item article {
@@ -1521,6 +1643,10 @@ footer {
 }
 
 .side-quote{
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -1533,9 +1659,14 @@ footer {
     text-decoration: none;
 }
 .side-quote .quote-title {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     flex-direction: row;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 .side-quote .quote-title > article{
     flex: 0 0 110px;
@@ -1756,14 +1887,25 @@ footer {
     font-size: 17px;
 }
 .footer-content{
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    -webkit-align-items: center;
+	align-items: center;
+    -webkit-justify-content: space-between;
+	justify-content: space-between;
     padding: 15px 0;
 }
 .footer-content .share{
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 .footer-content .share > span{
     font-size:  18px;
@@ -1771,8 +1913,13 @@ footer {
     margin-right: 5px;
 }
 .footer-content .share > a{
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     text-decoration: none;
     font-size:  18px;
     color: #000047;
@@ -1793,6 +1940,10 @@ footer {
 /* .guides {} */
 
 .guide-item {
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     border-radius: 4px;
     background-color: rgb(255, 255, 255);
@@ -1855,12 +2006,18 @@ footer {
   
   /* End Guide */
 
+
 /* Marquee */
 .marquee-main{
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
     height: 60px;
     background: #ffffff;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
     width: 100%;
     padding: 0 30px;
     margin: 20px 0;
@@ -1873,23 +2030,38 @@ footer {
     flex: 0 0 240px;
     max-width: 240px;
     color: #000047;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 .marquee-title > i.fa{
     margin-right: 5px;
 }
 .marquee-content{
     width: 100%;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 .marquee-content ul{
     list-style: none;
     padding: 0;
     margin: 0;
+    display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;    /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;  /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Chrome */
     display: flex;
-    align-items: center;
+    -webkit-align-items: center;
+	align-items: center;
 }
 .marquee-content ul li {
     margin: 0;

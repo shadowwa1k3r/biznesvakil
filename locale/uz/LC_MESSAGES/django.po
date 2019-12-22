@@ -23,7 +23,7 @@ msgstr ""
 msgid ""
 "Уполномоченный при Президенте Республики Узбекистан по защите прав и "
 "законных интересов субъектов предпринимательства"
-msgstr ""
+msgstr "Tashkilotlarning qonuniy manfaatlari va huquqlarini himoya qilish boyicha O'zbekiston Respublikasi prezidenti yonidagi mas'ul tashkilot "
 
 #: templates/_banner.html:26
 msgid ""
@@ -44,11 +44,11 @@ msgstr ""
 #: templates/_base.html:47 templates/_main_base.html:47
 #: templates/manage.html:15
 msgid "Руководство"
-msgstr ""
+msgstr "Boshqarma"
 
 #: templates/_base.html:48 templates/_main_base.html:48
 msgid "Основные задачи и направления, права Уполномоченного"
-msgstr ""
+msgstr "Asosiy masala va yonalishlar, mas'ul shaxs huquqlari"
 
 #: templates/_base.html:49 templates/_main_base.html:49
 msgid "Структура аппарата Уполномоченного"
@@ -56,19 +56,19 @@ msgstr ""
 
 #: templates/_base.html:50 templates/_main_base.html:50
 msgid "Объявления"
-msgstr ""
+msgstr "E'lonlar"
 
 #: templates/_base.html:51 templates/_main_base.html:51
 msgid "Награды"
-msgstr ""
+msgstr "Mukofotlar"
 
 #: templates/_base.html:55 templates/_main_base.html:55
 msgid "Деятельность"
-msgstr ""
+msgstr "Ish jarayoni"
 
 #: templates/_base.html:57 templates/_main_base.html:57
 msgid "Общая информация"
-msgstr ""
+msgstr "Umumiy axborot"
 
 #: templates/_base.html:58 templates/_main_base.html:58
 msgid "Правовые основы деятельности"
