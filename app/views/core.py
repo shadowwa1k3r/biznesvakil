@@ -1,7 +1,7 @@
 from django.views.generic import View, ListView, TemplateView
 from django.shortcuts import render
 
-from app.models import News, MapData, City, Photo, Video
+from app.models import News, MapData, City, Photo, Video, About
 from app.models.service import Service
 from django.utils.translation import get_language
 
@@ -40,6 +40,8 @@ class IndexView(TemplateView):
         context['footer_news'] = news[2:5]
         context['services'] = Service.objects.all()
         context['map_datas'] = cities
+        if About.objects.all().count()>0:
+            context['about'] = About.objects.all().first()
         context['photos'] = Photo.objects.all().order_by('created')[:4]
         context['video'] = Video.objects.all().order_by('created')[:2]
 

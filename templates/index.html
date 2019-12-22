@@ -111,22 +111,32 @@
             <div class="row">
                 <div class="col-6">
                     <div class="home-about__content">
+
+
+
                         <div class="about-title">
-                            <span data-aos="fade-left" data-aos-delay="200" data-aos-duration="400">{% trans "ABOUT HALE BUSINESS CENTRE" %}</span>
-                            <h2 data-aos="fade-left" data-aos-delay="600" data-aos-duration="400">{% trans "Our passion and your future combined together" %}</h2>
+                              {% if request.LANGUAGE_CODE == 'ru' %}
+                                  <span data-aos="fade-left" data-aos-delay="200" data-aos-duration="400">{{ about.header_ru }}</span>
+                                  <h2 data-aos="fade-left" data-aos-delay="600" data-aos-duration="400">{{ about.title_ru }}</h2>
+                              {% elif request.LANGUAGE_CODE == 'uz' %}
+                                  <span data-aos="fade-left" data-aos-delay="200" data-aos-duration="400">{{ about.header_uz }}</span>
+                                  <h2 data-aos="fade-left" data-aos-delay="600" data-aos-duration="400">{{ about.title_uz }}</h2>
+                              {% elif request.LANGUAGE_CODE == 'en' %}
+                                  <span data-aos="fade-left" data-aos-delay="200" data-aos-duration="400">{{ about.header_en }}</span>
+                                  <h2 data-aos="fade-left" data-aos-delay="600" data-aos-duration="400">{{ about.title_en }}</h2>
+                              {% endif %}
+
                         </div>
                         <div class="about-content">
-                            <p>{% blocktrans %}
-                                We believe in taking a genuine interest in the growth and success of your business, after all if your success means we are doing something right! To
-                                this end, our focus is on providing business solutions to help you save time and money, allowing you vital portability and flexibility to do
-                                business.
-                                {% endblocktrans %}
-                            </p>
-                            <p>{% blocktrans %}
-                                Hale Business Centre was created to offer a personalised and flexible office solution to businesses around the city. By carefully designing our
-                                offices locations to maximise light and natural ventilation, we’ve created modern offices built to meet the demands of the modern business
-                                workplace.
-                                {% endblocktrans %}
+                            <p>
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                               {{ about.content_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                               {{ about.content_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ about.content_en }}
+                            {% endif %}
+
                             </p>
                         </div>
                         <div class="about-footer">
