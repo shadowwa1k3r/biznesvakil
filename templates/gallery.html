@@ -26,7 +26,7 @@
                             <div class="main-row">
                                 {% for photo in photos %}
                                     <div class="main-col-6">
-                                    <a href="#" class="gallery-item" data-aos="flip-up" data-aos-delay="100">
+                                    <a data-fancybox="gallery" href="{{photo.file.url}}" class="gallery-item" data-aos="flip-up" data-aos-delay="100">
                                         <article>
                                             <img src="{{photo.file.url}}" alt="">
                                         </article>
