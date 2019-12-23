@@ -43,145 +43,149 @@ msgid ""
 "Об\n"
 "                                Уполномоченном "
 msgstr ""
+"Об\n"
+"                                Уполномоченном "
 
 #: templates/_base.html:47 templates/_main_base.html:47
 #: templates/manage.html:15
 msgid "Руководство"
-msgstr ""
+msgstr "Руководство"
 
 #: templates/_base.html:48 templates/_main_base.html:48
 msgid "Основные задачи и направления, права Уполномоченного"
-msgstr ""
+msgstr "Основные задачи и направления, права Уполномоченного"
 
 #: templates/_base.html:49 templates/_main_base.html:49
 msgid "Структура аппарата Уполномоченного"
-msgstr ""
+msgstr "Структура аппарата Уполномоченного"
 
 #: templates/_base.html:50 templates/_main_base.html:50
 msgid "Объявления"
-msgstr ""
+msgstr "Объявления"
 
 #: templates/_base.html:51 templates/_main_base.html:51
 msgid "Награды"
-msgstr ""
+msgstr "Награды"
 
 #: templates/_base.html:55 templates/_main_base.html:55
 msgid "Деятельность"
-msgstr ""
+msgstr "Деятельность"
 
 #: templates/_base.html:57 templates/_main_base.html:57
 msgid "Общая информация"
-msgstr ""
+msgstr "Общая информация"
 
 #: templates/_base.html:58 templates/_main_base.html:58
 msgid "Правовые основы деятельности"
-msgstr ""
+msgstr "Правовые основы деятельности"
 
 #: templates/_base.html:59 templates/_main_base.html:59
 msgid "Обзор о проделанной работе"
-msgstr ""
+msgstr "Обзор о проделанной работе"
 
 #: templates/_base.html:60 templates/_main_base.html:60
 msgid "Результаты обращений"
-msgstr ""
+msgstr "Результаты обращений"
 
 #: templates/_base.html:61 templates/_main_base.html:61
 msgid ""
 "Деятельность комиссии по соблюдению прав и законных интересов субъектов "
 "предпринимательства"
 msgstr ""
+"Деятельность комиссии по соблюдению прав и законных интересов субъектов "
+"предпринимательства"
 
 #: templates/_base.html:66 templates/_main_base.html:66
 msgid "Сотрудничество"
-msgstr ""
+msgstr "Сотрудничество"
 
 #: templates/_base.html:68 templates/_main_base.html:68
 msgid "Меморандумы о сотрудничестве"
-msgstr ""
+msgstr "Меморандумы о сотрудничестве"
 
 #: templates/_base.html:69 templates/_main_base.html:69
 msgid "Сайты Омбудсменов по защите прав предпринимателей зарубежных стран"
-msgstr ""
+msgstr "Сайты Омбудсменов по защите прав предпринимателей зарубежных стран"
 
 #: templates/_base.html:70 templates/_main_base.html:70
 msgid "Зарубежные визиты"
-msgstr ""
+msgstr "Зарубежные визиты"
 
 #: templates/_base.html:75 templates/_main_base.html:75
 msgid "Законодательство"
-msgstr ""
+msgstr "Законодательство"
 
 #: templates/_base.html:77 templates/_main_base.html:77
 msgid "Новое в законодательстве"
-msgstr ""
+msgstr "Новое в законодательстве"
 
 #: templates/_base.html:78 templates/_main_base.html:78
 msgid "Нормативно-правовые акты, регулирующие порядок проверок "
-msgstr ""
+msgstr "Нормативно-правовые акты, регулирующие порядок проверок "
 
 #: templates/_base.html:79 templates/_main_base.html:79
 msgid "База данных Lex.uz"
-msgstr ""
+msgstr "База данных Lex.uz"
 
 #: templates/_base.html:80 templates/_main_base.html:80
 msgid "Проекты актов законодательства"
-msgstr ""
+msgstr "Проекты актов законодательства"
 
 #: templates/_base.html:86 templates/_main_base.html:86
 #: templates/gallery.html:102 templates/manage.html:64 templates/news.html:23
 #: templates/news.html:70 templates/news_view.html:18
 #: templates/news_view.html:91 templates/video.html:66
 msgid "Новости"
-msgstr ""
+msgstr "Новости"
 
 #: templates/_base.html:87 templates/_main_base.html:87
 #: templates/gallery.html:105 templates/manage.html:67 templates/news.html:73
 #: templates/news_view.html:94 templates/video.html:69
 msgid "Пресс-релизы"
-msgstr ""
+msgstr "Пресс-релизы"
 
 #: templates/_base.html:88 templates/_main_base.html:88
 #: templates/gallery.html:108 templates/manage.html:70 templates/news.html:76
 #: templates/news_view.html:97 templates/video.html:72
 msgid "Статьи"
-msgstr ""
+msgstr "Статьи"
 
 #: templates/_base.html:89 templates/_main_base.html:89
 #: templates/gallery.html:15 templates/gallery.html:111
 #: templates/manage.html:73 templates/news.html:79 templates/news_view.html:100
 #: templates/video.html:75
 msgid "Фотогалерея"
-msgstr ""
+msgstr "Фотогалерея"
 
 #: templates/_base.html:90 templates/_main_base.html:90
 #: templates/gallery.html:114 templates/manage.html:76 templates/news.html:82
 #: templates/news_view.html:103 templates/video.html:15 templates/video.html:78
 msgid "Видеогалерея"
-msgstr ""
+msgstr "Видеогалерея"
 
 #: templates/_base.html:93 templates/_main_base.html:93
 msgid "Контакты"
-msgstr ""
+msgstr "Контакты"
 
 #: templates/_base.html:120 templates/_main_base.html:122
 msgid "Уполномоченный при Президенте"
-msgstr ""
+msgstr "Уполномоченный при Президенте"
 
 #: templates/_base.html:121 templates/_main_base.html:123
 msgid "Республики Узбекистан по защите прав и законных"
-msgstr ""
+msgstr "Республики Узбекистан по защите прав и законных"
 
 #: templates/_base.html:122 templates/_main_base.html:124
 msgid "интересов субъектов предпринимательства"
-msgstr ""
+msgstr "интересов субъектов предпринимательства"
 
 #: templates/_base.html:125 templates/_main_base.html:127
 msgid "Все права защищены"
-msgstr ""
+msgstr "Все права защищены"
 
 #: templates/_base.html:134 templates/_main_base.html:136
 msgid "100011,г. Ташкент, ул.Навоий шох, дом 4 "
-msgstr ""
+msgstr "100011,г. Ташкент, ул.Навоий шох, дом 4 "
 
 #: templates/_base.html:135 templates/_main_base.html:137
 msgid ""
@@ -190,10 +194,14 @@ msgid ""
 "Республики Узбекистан)\n"
 "                                        "
 msgstr ""
+"(бывшее здание Министерства сельского\n"
+"                                                и водного хозяйства "
+"Республики Узбекистан)\n"
+"                                        "
 
 #: templates/_base.html:153 templates/_main_base.html:155
 msgid "Мы в соц.сетях:"
-msgstr ""
+msgstr "Мы в соц.сетях:"
 
 #: templates/_services.html:54
 msgid "Lorem, ipsum dolor:"
@@ -201,11 +209,11 @@ msgstr ""
 
 #: templates/_side_banner.html:8
 msgid "Касимов Дилмурод Султанмуротович"
-msgstr ""
+msgstr "Касимов Дилмурод Султанмуротович"
 
 #: templates/_side_banner.html:9
 msgid "Уполномоченный"
-msgstr ""
+msgstr "Уполномоченный"
 
 #: templates/_side_banner.html:13
 msgid ""
@@ -217,32 +225,32 @@ msgstr ""
 
 #: templates/_side_banner.html:22 templates/index.html:84
 msgid "2019 - Год активных инвестиций и социального развития"
-msgstr ""
+msgstr "2019 - Год активных инвестиций и социального развития"
 
 #: templates/gallery.html:99 templates/manage.html:61 templates/news.html:67
 #: templates/news_view.html:88 templates/video.html:63
 msgid "Пресс служба"
-msgstr ""
+msgstr "Пресс служба"
 
 #: templates/index.html:11
 msgid "Последние новости"
-msgstr ""
+msgstr "Последние новости"
 
 #: templates/index.html:12
 msgid "Все новости"
-msgstr ""
+msgstr "Все новости"
 
 #: templates/index.html:92
 msgid "Государственные символы"
-msgstr ""
+msgstr "Государственные символы"
 
 #: templates/index.html:100
 msgid "Национальная"
-msgstr ""
+msgstr "Национальная"
 
 #: templates/index.html:100
 msgid "база данных законодательства"
-msgstr ""
+msgstr "база данных законодательства"
 
 #: templates/index.html:115
 msgid "ABOUT HALE BUSINESS CENTRE"
@@ -280,11 +288,11 @@ msgstr ""
 
 #: templates/index.html:133
 msgid "More About Us"
-msgstr ""
+msgstr "О нас"
 
 #: templates/index.html:134
 msgid "Contact Us"
-msgstr ""
+msgstr "Контакты"
 
 #: templates/index.html:155
 msgid "Our simple process"
@@ -314,53 +322,53 @@ msgstr ""
 
 #: templates/index.html:299
 msgid "Фото"
-msgstr ""
+msgstr "Фото"
 
 #: templates/index.html:300
 msgid "Все фото"
-msgstr ""
+msgstr "Все фото"
 
 #: templates/index.html:392
 msgid "Видео"
-msgstr ""
+msgstr "Видео"
 
 #: templates/index.html:393
 msgid "Все видео"
-msgstr ""
+msgstr "Все видео"
 
 #: templates/index.html:434 templates/index.html:474
 msgid "Мирзо Улугбекский Инновационный Центр"
-msgstr ""
+msgstr "Мирзо Улугбекский Инновационный Центр"
 
 #: templates/index.html:444
 msgid "Национальное агентство проектного управления при президенте РУз"
-msgstr ""
+msgstr "Национальное агентство проектного управления при президенте РУз"
 
 #: templates/index.html:454
 msgid ""
 "Республиканская высшая школа бизнеса и управления имени Абу Райхана Беруни"
 msgstr ""
-
+"Республиканская высшая школа бизнеса и управления имени Абу Райхана Беруни"
 #: templates/index.html:464
 msgid "Единая система идентификации"
-msgstr ""
+msgstr "Единая система идентификации"
 
 #: templates/manage.html:38 templates/manage.html:42 templates/manage.html:46
 msgid "Дни приема"
-msgstr ""
+msgstr "Дни приема"
 
 #: templates/manage.html:48
 msgid "Телефон"
-msgstr ""
+msgstr "Телефон"
 
 #: templates/manage.html:49
 msgid "Э-Почта"
-msgstr ""
+msgstr "Э-Почта"
 
 #: templates/manage.html:51
 msgid "Подробнее"
-msgstr ""
+msgstr "Подробнее"
 
 #: templates/news_view.html:70
 msgid "Поделиться"
-msgstr ""
+msgstr "Поделиться"
