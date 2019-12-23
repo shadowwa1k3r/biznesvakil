@@ -76,14 +76,21 @@
                 </div>
                 <div class="col-3">
                     <div class="news-banner">
-                        <div class="new-year" data-aos="zoom-in">
-                            <article>
-                                <img src="{% static 'images/banner.png' %}" alt="">
-                            </article>
-                            <div class="new-year__title">
-                                {% trans "2019 - Год активных инвестиций и социального развития" %}
+                        <div class="side-quote">
+                                <div class="quote-title">
+                                    <article>
+                                        <img src="{% static 'images/vakil.jpg' %}" alt="">
+                                    </article>
+                                    <div class="quote-title__info">
+                                        <h2>{% trans "Касимов Дилмурод Султанмуротович" %}</h2>
+                                        <span>{% trans "Уполномоченный" %}</span>
+                                    </div>
+                                </div>
+                                <div class="quote-content">
+                                    <p>{% trans "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, vero? Id hic illo voluptatibus est, amet, praesentium, totam maiores aspernatur ratione commodi cum alias. Delectus perspiciatis nisi quasi laboriosam debitis!" %}</p>
+                                </div>
+
                             </div>
-                        </div>
                         <div class="news-banner__item" data-aos="zoom-in-right">
                             <a href="#">
                                 <article>
