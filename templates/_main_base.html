@@ -34,73 +34,106 @@
 <div class="wrapper">
     <header>
         <div class="container">
-            <nav class="navbar navbar-light navbar-expand-lg mainmenu">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {% blocktrans %}Об
-                                Уполномоченном {%endblocktrans %}</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="{% url 'management.list' %}">{% trans "Руководство" %}</a></li>
-                                <li><a href="#">{% trans "Основные задачи и направления, права Уполномоченного" %}</a></li>
-                                <li><a href="#">{% trans "Структура аппарата Уполномоченного" %}</a></li>
-                                <li><a href="news.html">{% trans "Объявления" %}</a></li>
-                                <li><a href="news.html">{% trans "Награды" %}</a></li>
+            <div class="navbar-main">
+                <a class="toggleMobileMenu" href="#mobileMenu">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+                <nav id="mobileMenu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><span>About us</span>
+                            <ul>
+                                <li><a href="#about/history">History</a></li>
+                                <li><span>The team</span>
+                                    <ul>
+                                        <li><a href="#about/team/management">Management</a></li>
+                                        <li><a href="#about/team/sales">Sales</a></li>
+                                        <li><a href="#about/team/development">Development</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#about/address">Our address</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Деятельность" %}</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="#">{% trans "Общая информация" %}</a></li>
-                                <li><a href="#">{% trans "Правовые основы деятельности" %}</a></li>
-                                <li><a href="#">{% trans "Обзор о проделанной работе" %}</a></li>
-                                <li><a href="#">{% trans "Результаты обращений" %}</a></li>
-                                <li><a href="#">{% trans "Деятельность комиссии по соблюдению прав и законных интересов субъектов предпринимательства" %}</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">{% trans "Сотрудничество" %}</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="#">{% trans "Меморандумы о сотрудничестве" %}</a></li>
-                                <li><a href="#">{% trans "Сайты Омбудсменов по защите прав предпринимателей зарубежных стран" %}</a></li>
-                                <li><a href="#">{% trans "Зарубежные визиты" %}</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                               aria-expanded="false">{% trans "Законодательство" %}</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="#">{% trans "Новое в законодательстве" %}</a></li>
-                                <li><a href="#">{% trans "Нормативно-правовые акты, регулирующие порядок проверок " %}</a></li>
-                                <li><a href="#">{% trans "База данных Lex.uz" %}</a></li>
-                                <li><a href="#">{% trans "Проекты актов законодательства" %}</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Пресс служба</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a href="{% url 'news.list' %}">{% trans "Новости" %}</a></li>
-                                <li><a href="#">{% trans "Пресс-релизы" %}</a></li>
-                                <li><a href="#">{% trans "Статьи" %}</a></li>
-                                <li><a href="{% url 'gallery.list.photo' %}">{% trans "Фотогалерея" %}</a></li>
-                                <li><a href="{% url 'gallery.list.video' %}">{% trans "Видеогалерея" %}</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">{% trans "Контакты" %}</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="advanced.html">Advanced demo</a></li>
+                        <li><a href="onepage.html">One page demo</a></li>
                     </ul>
-
-                    <div class="header-lang">
-                        <div class="language">
-                            <span><i class="fa fa-globe" aria-hidden="true"></i> Русский <i class="fa fa-angle-down" aria-hidden="true"></i></span>
-                        </div>
+                </nav>
+                <nav class="navbar navbar-light navbar-expand-lg mainmenu">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {% blocktrans %}Об
+                                    Уполномоченном {%endblocktrans %}</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a href="{% url 'management.list' %}">{% trans "Руководство" %}</a></li>
+                                    <li><a href="#">{% trans "Основные задачи и направления, права Уполномоченного" %}</a></li>
+                                    <li><a href="#">{% trans "Структура аппарата Уполномоченного" %}</a></li>
+                                    <li><a href="news.html">{% trans "Объявления" %}</a></li>
+                                    <li><a href="news.html">{% trans "Награды" %}</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Деятельность" %}</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a href="#">{% trans "Общая информация" %}</a></li>
+                                    <li><a href="#">{% trans "Правовые основы деятельности" %}</a></li>
+                                    <li><a href="#">{% trans "Обзор о проделанной работе" %}</a></li>
+                                    <li><a href="#">{% trans "Результаты обращений" %}</a></li>
+                                    <li><a href="#">{% trans "Деятельность комиссии по соблюдению прав и законных интересов субъектов предпринимательства" %}</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">{% trans "Сотрудничество" %}</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a href="#">{% trans "Меморандумы о сотрудничестве" %}</a></li>
+                                    <li><a href="#">{% trans "Сайты Омбудсменов по защите прав предпринимателей зарубежных стран" %}</a></li>
+                                    <li><a href="#">{% trans "Зарубежные визиты" %}</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                                   aria-expanded="false">{% trans "Законодательство" %}</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a href="#">{% trans "Новое в законодательстве" %}</a></li>
+                                    <li><a href="#">{% trans "Нормативно-правовые акты, регулирующие порядок проверок " %}</a></li>
+                                    <li><a href="#">{% trans "База данных Lex.uz" %}</a></li>
+                                    <li><a href="#">{% trans "Проекты актов законодательства" %}</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Пресс служба</a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a href="{% url 'news.list' %}">{% trans "Новости" %}</a></li>
+                                    <li><a href="#">{% trans "Пресс-релизы" %}</a></li>
+                                    <li><a href="#">{% trans "Статьи" %}</a></li>
+                                    <li><a href="{% url 'gallery.list.photo' %}">{% trans "Фотогалерея" %}</a></li>
+                                    <li><a href="{% url 'gallery.list.video' %}">{% trans "Видеогалерея" %}</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">{% trans "Контакты" %}</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="header-lang">
+                    <div class="language">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class="fa fa-globe" aria-hidden="true"></i> Русский</span></a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a href="news.html">Узбекча</a></li>
+                                    <li><a href="news.html">English</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </nav>
+            </div>
         </div>
     </header>
 
