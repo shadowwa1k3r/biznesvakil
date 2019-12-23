@@ -4,6 +4,7 @@ from .service import Service
 from .regions import City, MapData
 from .media import Photo, Video
 from .about import About
+from .number import Numbers
 
 __all__ = [
     'Management',
@@ -14,5 +15,6 @@ __all__ = [
     'MapData',
     'Photo',
     'Video',
-    'About'
+    'About',
+    'Numbers'
 ]

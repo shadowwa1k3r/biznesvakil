@@ -162,33 +162,81 @@
     <section class="home-features" data-parallax="scroll" data-image-src="{% static 'images/bgbg.jpg' %}">
         <div class="container">
             <div class="features-main">
-                <h2>{% trans "Our simple process" %}</h2>
-                <p>{% trans "We like to keep things simple – that’s why our contracts are short and sweet. As soon as you’ve signed and paid, we’ll hand over the keys!" %}</p>
+                <h2>
+                    {% if request.LANGUAGE_CODE == 'ru' %}
+                               {{ numbers.title_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                               {{ numbers.title_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ numbers.title_en }}
+                            {% endif %}
+                </h2>
+                <p>
+                    {% if request.LANGUAGE_CODE == 'ru' %}
+                               {{ numbers.description_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                               {{ numbers.description_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ numbers.description_en }}
+                            {% endif %}
+                </p>
                 <div id="counter" class="features">
                     <div class="features-item">
                         <article>
-                            <div class="counter-value" data-count="840">100</div>
+                            <div class="counter-value" data-count="840">{{numbers.element1_value}}</div>
                         </article>
-                        <span>{% trans "Contact." %}</span>
+                        <span>
+                              {% if request.LANGUAGE_CODE == 'ru' %}
+                               {{ numbers.element1_title_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                               {{ numbers.element1_title_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ numbers.element1_title_en }}
+                            {% endif %}
+                        </span>
                     </div>
                     <div class="features-item">
                         <article>
-                            <div class="counter-value" data-count="84">0</div>
+                            <div class="counter-value" data-count="84">{{numbers.element2_value}}</div>
                             %
                         </article>
-                        <span>{% trans "View." %}</span>
+                        <span>
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                               {{ numbers.element2_title_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                               {{ numbers.element2_title_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ numbers.element2_title_en }}
+                            {% endif %}
+                        </span>
                     </div>
                     <div class="features-item">
                         <article>
-                            <div class="counter-value" data-count="3000">2000</div>
+                            <div class="counter-value" data-count="3000">{{numbers.element3_value}}</div>
                         </article>
-                        <span>{% trans "Sign." %}</span>
+                        <span>
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                               {{ numbers.element3_title_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                               {{ numbers.element3_title_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ numbers.element3_title_en }}
+                            {% endif %}
+                        </span>
                     </div>
                     <div class="features-item">
                         <article>
-                            <div class="counter-value" data-count="14000">5000</div>
+                            <div class="counter-value" data-count="14000">{{numbers.element4_value}}</div>
                         </article>
-                        <span>{% trans "Move." %}</span>
+                        <span>
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                               {{ numbers.element4_title_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                               {{ numbers.element4_title_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ numbers.element4_title_en }}
+                            {% endif %}
+                        </span>
                     </div>
                 </div>
             </div>
