@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'js/mmenu/mmenu.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/media.css' %}">
 
@@ -166,20 +167,11 @@
 
 </div>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="{% static 'js/mmenu/mmenu.polyfills.js' %}"></script>
+<script src="{% static 'js/mmenu/mmenu.js' %}"></script>
+
 <script>
-    /*$("#slider").owlCarousel({
-        loop: true,
-        lazyLoad: true,
-        autoplay: true,
-        autoplayTimeout: 8000,
-        smartSpeed: 1000,
-        items: 1,
-        margin: 0,
-        dots: true,
-        nav: false,
-        animateIn: 'fadeIn',
-        animateOut: 'fadeOut',
-    });*/
+    new Mmenu( document.querySelector( '#mobileMenu' ));
 
     $('#usefull').owlCarousel({
         loop: true,
