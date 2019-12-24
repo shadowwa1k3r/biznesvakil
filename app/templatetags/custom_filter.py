@@ -8,6 +8,6 @@ register = template.Library()
 def get_item(dictionary, key):
     return dictionary.get(key).get('content')
 
-@register.tag
+@register.simple_tag()
 def get_ticker(wtf):
     return Ticker.objects.all()
