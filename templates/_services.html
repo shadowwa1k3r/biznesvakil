@@ -51,7 +51,7 @@
         <div class="marquee-main">
                     <div class="marquee-title">
                         <i class="fa fa-money" aria-hidden="true"></i>
-                        {% get_ticker as tickers %}
+                        {% with get_ticker as tickers %}
                         <span>
                             {% if request.LANGUAGE_CODE == 'ru' %}
                                 {{ tickers.0.name_ru }}
@@ -76,7 +76,7 @@
 
                                 {% endfor %}
 
-
+                            {% endwith %}
                             </ul>
                         </marquee>
                     </div>
