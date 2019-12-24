@@ -1,4 +1,4 @@
-{% load static i18n %}
+{% load static i18n custom_filter %}
 <section class="home-services">
         <div class="container">
             <div class="services">
@@ -51,15 +51,32 @@
         <div class="marquee-main">
                     <div class="marquee-title">
                         <i class="fa fa-money" aria-hidden="true"></i>
-                        <span>{% trans "Lorem, ipsum dolor:"  %}</span>
+                        {% get_ticker as tickers %}
+                        <span>
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                {{ tickers.0.name_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                {{ tickers.0.name_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ tickers.0.name_en }}
+                            {% endif %}
+                        </span>
                     </div>
                     <div class="marquee-content">
                         <marquee>
                             <ul>
-                                <li><strong>1 USD:</strong> 9500 UZS</li>
-                                <li><strong>1 RUB:</strong> 135 UZS</li>
-                                <li><strong>1 USD:</strong> 9500 UZS</li>
-                                <li><strong>1 RUB:</strong> 135 UZS</li>
+                                {% for ticker in tickers  %}
+                                    {% if request.LANGUAGE_CODE == 'ru' %}
+                                        <li><strong>{{ticker.title_ru}}:</strong> {{ticker.content_ru}}</li>
+                                    {% elif request.LANGUAGE_CODE == 'uz' %}
+                                        <li><strong>{{ticker.title_uz}}:</strong> {{ticker.content_uz}}</li>
+                                    {% elif request.LANGUAGE_CODE == 'en' %}
+                                        <li><strong>{{ticker.title_en}}:</strong> {{ticker.content_en}}</li>
+                                    {% endif %}
+
+                                {% endfor %}
+
+
                             </ul>
                         </marquee>
                     </div>

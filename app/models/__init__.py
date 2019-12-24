@@ -5,6 +5,7 @@ from .regions import City, MapData
 from .media import Photo, Video
 from .about import About
 from .number import Numbers
+from .ticker import Ticker
 
 __all__ = [
     'Management',
@@ -16,5 +17,6 @@ __all__ = [
     'Photo',
     'Video',
     'About',
-    'Numbers'
+    'Numbers',
+    'Ticker'
 ]
