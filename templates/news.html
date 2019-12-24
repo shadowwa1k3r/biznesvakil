@@ -42,14 +42,13 @@
                                             <div class="news-item__title">
                                                 <span>{{new.created}}</span>
                                                 <p>
-
-                                                     {% if request.LANGUAGE_CODE == 'ru' %}
+                                                {% if request.LANGUAGE_CODE == 'ru' %}
                                                 {{new.title_ru}}
                                                 {% elif request.LANGUAGE_CODE == 'uz' %}
                                                 {{new.title_uz}}
                                                 {% elif request.LANGUAGE_CODE == 'en' %}
                                                 {{new.title_en}}
-                                            {% endif %}
+                                                {% endif %}
                                                 </p>
                                             </div>
                                         </a>

@@ -1,16 +1,34 @@
-{% load static i18n %}
+{% load static i18n custom_filter %}
 <div class="side-quote">
                                 <div class="quote-title">
+                                    {% get_quote as quote %}
                                     <article>
-                                        <img src="{% static 'images/vakil.jpg' %}" alt="">
+                                        <img src="{{ quote.image.url }}" alt="">
                                     </article>
                                     <div class="quote-title__info">
-                                        <h2>{% trans "Касимов Дилмурод Султанмуротович" %}</h2>
-                                        <span>{% trans "Уполномоченный" %}</span>
+                                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    <h2>{{quote.author_name_ru}}</h2>
+                                                    <span>{{quote.position_ru}}</span>
+                                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    <h2>{{quote.author_name_uz}}</h2>
+                                                    <span>{{quote.position_uz}}</span>
+                                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    <h2>{{quote.author_name_en}}</h2>
+                                                    <span>{{quote.position_en}}</span>
+                                                {% endif %}
+
                                     </div>
                                 </div>
                                 <div class="quote-content">
-                                    <p>{% trans "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, vero? Id hic illo voluptatibus est, amet, praesentium, totam maiores aspernatur ratione commodi cum alias. Delectus perspiciatis nisi quasi laboriosam debitis!" %}</p>
+                                    <p>
+                                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{quote.content_ru}}
+                                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{quote.content_uz}}
+                                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{quote.content_en}}
+                                                {% endif %}
+                                    </p>
                                 </div>
 
                             </div>

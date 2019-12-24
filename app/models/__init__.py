@@ -6,6 +6,7 @@ from .media import Photo, Video
 from .about import About
 from .number import Numbers
 from .ticker import Ticker
+from .quote import Quote
 
 __all__ = [
     'Management',
@@ -18,5 +19,6 @@ __all__ = [
     'Video',
     'About',
     'Numbers',
-    'Ticker'
+    'Ticker',
+    'Quote'
 ]
