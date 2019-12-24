@@ -9,5 +9,5 @@ def get_item(dictionary, key):
     return dictionary.get(key).get('content')
 
 @register.tag
-def get_ticker():
+def get_ticker(wtf):
     return Ticker.objects.all()
