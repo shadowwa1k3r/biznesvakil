@@ -7,6 +7,7 @@ from .about import About
 from .number import Numbers
 from .ticker import Ticker
 from .quote import Quote
+from .menu import Menu, Page
 
 __all__ = [
     'Management',
@@ -20,5 +21,7 @@ __all__ = [
     'About',
     'Numbers',
     'Ticker',
-    'Quote'
+    'Quote',
+    'Page',
+    'Menu'
 ]
