@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
 
     'app'
 ]
@@ -144,3 +145,5 @@ LANGS = {
     "ru":"Русский",
     "uz":"Узбекча",
 }
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
