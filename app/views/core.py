@@ -19,13 +19,22 @@ class IndexView(TemplateView):
             subdict = {}
             if lang=='ru':
                 subdict['name'] = city.name_ru
-                subdict['content'] = city.mapdata_set.all()[0].content_ru
-            elif lang=='uz':
+                if len(city.mapdata_set.all()) == 0:
+                    subdict['content'] = ''
+                else:
+                    subdict['content'] = city.mapdata_set.all()[0].content_ru
+            elif lang == 'uz':
                 subdict['name'] = city.name_uz
-                subdict['content'] = city.mapdata_set.all()[0].content_uz
-            elif lang=='en':
+                if len(city.mapdata_set.all()) == 0:
+                    subdict['content'] = ''
+                else:
+                    subdict['content'] = city.mapdata_set.all()[0].content_uz
+            elif lang == 'en':
                 subdict['name'] = city.name_en
-                subdict['content'] = city.mapdata_set.all()[0].content_en
+                if len(city.mapdata_set.all()) == 0:
+                    subdict['content'] = ''
+                else:
+                    subdict['content'] = city.mapdata_set.all()[0].content_en
 
 
             cities[city.code] = subdict
