@@ -2169,3 +2169,12 @@ footer {
 .mm-wrapper__blocker {
     background: rgba(0, 0, 0, 0.75);
 }
+
+.mainmenu ul.navbar-nav ul.dropdown-menu li>a,
+.collapse > ul > li > a{
+    transition: color 0.1s ease-in-out;
+}
+.mainmenu ul.navbar-nav ul.dropdown-menu li>a:hover,
+.collapse > ul > li:hover > a{
+    color: #ffaa38;
+}
