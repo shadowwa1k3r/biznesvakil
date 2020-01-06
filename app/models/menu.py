@@ -12,7 +12,7 @@ class Menu(models.Model):
 
     class Meta:
         db_table = 'menu'
-        ordering = 'order'
+        ordering = ('order',)
 
     def __str__(self):
         return self.name_ru
