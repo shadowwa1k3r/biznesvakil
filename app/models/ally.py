@@ -6,6 +6,7 @@ class Ally(models.Model):
     name_uz = models.TextField()
     name_en = models.TextField()
     image = models.ImageField(upload_to='ally/')
+    link = models.TextField(default='')
 
     class Meta:
         db_table = 'allies'
