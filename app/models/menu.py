@@ -2,6 +2,7 @@ from django.db import models
 
 
 class Menu(models.Model):
+    order = models.IntegerField()
     name_ru = models.TextField()
     name_uz = models.TextField()
     name_en = models.TextField()
@@ -11,6 +12,7 @@ class Menu(models.Model):
 
     class Meta:
         db_table = 'menu'
+        ordering = 'order'
 
     def __str__(self):
         return self.name_ru
