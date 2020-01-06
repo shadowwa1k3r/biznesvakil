@@ -1,7 +1,8 @@
-from .core import IndexView
+from .core import IndexView, MenuView
 from .management import ManagementListView
 from .news import NewsListView, NewsDetailView
 from .gallery import GalleryView, VideoGalleryView
+from .feedback import FeedbackAPIView
 
 __all__ = [
     'IndexView',
@@ -9,5 +10,7 @@ __all__ = [
     'NewsListView',
     'NewsDetailView',
     'GalleryView',
-    'VideoGalleryView'
+    'VideoGalleryView',
+    'MenuView',
+    'FeedbackAPIView'
 ]

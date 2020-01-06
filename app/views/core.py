@@ -1,7 +1,8 @@
+from django.urls import reverse
 from django.views.generic import View, ListView, TemplateView
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-from app.models import News, MapData, City, Photo, Video, About, Numbers
+from app.models import News, MapData, City, Photo, Video, About, Numbers, Page
 from app.models.service import Service
 from django.utils.translation import get_language
 
@@ -55,4 +56,28 @@ class IndexView(TemplateView):
         context['video'] = Video.objects.all().order_by('created')[:2]
         context['numbers'] = Numbers.objects.all().first()
 
+        return context
+
+
+class MenuView(TemplateView):
+    template_name = 'static.html'
+
+    def get(self, request, *args, **kwargs):
+        if self.kwargs['page_alias'] == 'management':
+            return redirect(reverse('management.list'))
+        if self.kwargs['page_alias'] == 'news':
+            return redirect(reverse('news.list'))
+        if self.kwargs['page_alias'] == 'photo-gallery':
+            return redirect(reverse('gallery.list.photo'))
+        if self.kwargs['page_alias'] == 'video-gallery':
+            return redirect(reverse('gallery.list.video'))
+        if self.kwargs['page_alias'] == 'feedback':
+            return redirect(reverse('feedback'))
+        return super(MenuView, self).get(request, *args, **kwargs)
+
+
+    def get_context_data(self, **kwargs):
+        context = super(MenuView, self).get_context_data(**kwargs)
+        page = Page.objects.get(menu__page_alias=self.kwargs['page_alias'])
+        context['page'] = page
         return context

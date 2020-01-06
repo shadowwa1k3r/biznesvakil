@@ -1,12 +1,12 @@
-{% load static i18n %}
+{% load static i18n custom_filter %}
 <!DOCTYPE html>
 <html lang="en">
-
+{% get_menu_list as menulist %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>{% trans 'Biznes Ombudsman' %}</title>
     <link rel="stylesheet" href="{% static 'fonts/Gilroy/stylesheet.css' %}">
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
@@ -66,69 +66,50 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {% blocktrans %}Об
-                                    Уполномоченном {%endblocktrans %}</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a href="{% url 'management.list' %}">{% trans "Руководство" %}</a></li>
-                                    <li><a href="#">{% trans "Основные задачи и направления, права Уполномоченного" %}</a></li>
-                                    <li><a href="#">{% trans "Структура аппарата Уполномоченного" %}</a></li>
-                                    <li><a href="news.html">{% trans "Объявления" %}</a></li>
-                                    <li><a href="news.html">{% trans "Награды" %}</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{% trans "Деятельность" %}</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a href="#">{% trans "Общая информация" %}</a></li>
-                                    <li><a href="#">{% trans "Правовые основы деятельности" %}</a></li>
-                                    <li><a href="#">{% trans "Обзор о проделанной работе" %}</a></li>
-                                    <li><a href="#">{% trans "Результаты обращений" %}</a></li>
-                                    <li><a href="#">{% trans "Деятельность комиссии по соблюдению прав и законных интересов субъектов предпринимательства" %}</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                   aria-expanded="false">{% trans "Сотрудничество" %}</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a href="#">{% trans "Меморандумы о сотрудничестве" %}</a></li>
-                                    <li><a href="#">{% trans "Сайты Омбудсменов по защите прав предпринимателей зарубежных стран" %}</a></li>
-                                    <li><a href="#">{% trans "Зарубежные визиты" %}</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                   aria-expanded="false">{% trans "Законодательство" %}</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a href="#">{% trans "Новое в законодательстве" %}</a></li>
-                                    <li><a href="#">{% trans "Нормативно-правовые акты, регулирующие порядок проверок " %}</a></li>
-                                    <li><a href="#">{% trans "База данных Lex.uz" %}</a></li>
-                                    <li><a href="#">{% trans "Проекты актов законодательства" %}</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Пресс служба</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a href="{% url 'news.list' %}">{% trans "Новости" %}</a></li>
-                                    <li><a href="#">{% trans "Пресс-релизы" %}</a></li>
-                                    <li><a href="#">{% trans "Статьи" %}</a></li>
-                                    <li><a href="{% url 'gallery.list.photo' %}">{% trans "Фотогалерея" %}</a></li>
-                                    <li><a href="{% url 'gallery.list.video' %}">{% trans "Видеогалерея" %}</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">{% trans "Контакты" %}</a></li>
+                            {% for menu in menulist %}
+                                {% if not menu.has_parent %}
+                                    {% if menu.has_alias_without_child %}
+                                    {% else %}
+                                    {% endif %}
+                                    <li class="dropdown">
+                                    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            {{ menu.name_ru }}
+                                        </a>
+                                    {% if menu.has_child %}
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            {% for s_menu in menu.s_menu.all %}
+                                                <li>
+                                                    <a href="{% url 'menu' s_menu.page_alias %}">{{ s_menu.name_ru }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                    </li>
+                                {% endif %}
+
+
+                            {% endfor %}
                         </ul>
                     </div>
                 </nav>
+                {% get_languages as langs %}
                 <div class="header-lang">
                     <div class="language">
                         <ul class="navbar-nav mr-auto">
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class="fa fa-globe" aria-hidden="true"></i> Русский</span></a>
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class="fa fa-globe" aria-hidden="true"></i> {{ langs|get_item:request.LANGUAGE_CODE }}</span></a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a href="#">Узбекча</a></li>
-                                    <li><a href="#">English</a></li>
+                                    {% for key,value in langs.items %}
+                                        {% ifequal key request.LANGUAGE_CODE %}
+
+                                        {% else %}
+                                            <li><a href="{% change_lang key %}">{{ value }}</a></li>
+                                        {% endifequal %}
+
+                                    {% endfor %}
                                 </ul>
+
+
                             </li>
                         </ul>
                     </div>

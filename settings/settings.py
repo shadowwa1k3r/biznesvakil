@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
 
     'app'
 ]
@@ -139,3 +140,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale')
 ]
+LANGS = {
+    "en":"English",
+    "ru":"Русский",
+    "uz":"Узбекча",
+}
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
