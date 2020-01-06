@@ -38,8 +38,8 @@ class Menu(models.Model):
 @receiver(post_save, sender=Menu)
 def create_menu_page(sender, instance, created, **kwargs):
     if created:
-        if sender.has_parent:
-            page = Page.objects.create(menu=sender)
+        if instance.has_parent:
+            page = Page.objects.create(menu=instance)
             page.save()
 
 
