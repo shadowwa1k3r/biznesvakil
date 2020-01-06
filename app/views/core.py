@@ -2,7 +2,7 @@ from django.urls import reverse
 from django.views.generic import View, ListView, TemplateView
 from django.shortcuts import render, redirect
 
-from app.models import News, MapData, City, Photo, Video, About, Numbers, Page
+from app.models import News, MapData, City, Photo, Video, About, Numbers, Page, MapDefault
 from app.models.service import Service
 from django.utils.translation import get_language
 
@@ -16,6 +16,7 @@ class IndexView(TemplateView):
         print(lang)
         city_list = City.objects.all()
         cities = {}
+        map_default = ''
         for city in city_list:
             subdict = {}
             if lang=='ru':
@@ -24,18 +25,24 @@ class IndexView(TemplateView):
                     subdict['content'] = ''
                 else:
                     subdict['content'] = city.mapdata_set.all()[0].content_ru
+                if MapDefault.objects.all().count() > 0:
+                    map_default = MapDefault.objects.first().content_ru
             elif lang == 'uz':
                 subdict['name'] = city.name_uz
                 if len(city.mapdata_set.all()) == 0:
                     subdict['content'] = ''
                 else:
                     subdict['content'] = city.mapdata_set.all()[0].content_uz
+                if MapDefault.objects.all().count() > 0:
+                    map_default = MapDefault.objects.first().content_uz
             elif lang == 'en':
                 subdict['name'] = city.name_en
                 if len(city.mapdata_set.all()) == 0:
                     subdict['content'] = ''
                 else:
                     subdict['content'] = city.mapdata_set.all()[0].content_en
+                if MapDefault.objects.all().count() > 0:
+                    map_default = MapDefault.objects.first().content_en
 
 
             cities[city.code] = subdict
@@ -50,6 +57,8 @@ class IndexView(TemplateView):
         context['footer_news'] = news[2:5]
         context['services'] = Service.objects.all()
         context['map_datas'] = cities
+        context['map_default'] = map_default
+
         if About.objects.all().count()>0:
             context['about'] = About.objects.all().first()
         context['photos'] = Photo.objects.all().order_by('created')[:4]
