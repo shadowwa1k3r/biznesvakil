@@ -512,7 +512,7 @@
                         {% for ally in allies %}
 
                             <div class="item">
-                            <div class="usefull-item">
+                            <a href="{{ ally.link }}" class="usefull-item">
                                 <div class="usefull-item__image">
                                     <img src="{{ ally.image.url }}" alt="">
                                 </div>
@@ -528,7 +528,7 @@
                                                     {% endif %}
                                     </h2>
                                 </div>
-                            </div>
+                            </a>
                         </div>
 
                         {% endfor %}
