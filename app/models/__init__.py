@@ -1,7 +1,7 @@
 from .management import Management
 from .news import News, NewsFiles
 from .service import Service
-from .regions import City, MapData
+from .regions import City, MapData, MapDefault
 from .media import Photo, Video
 from .about import About
 from .number import Numbers
@@ -25,5 +25,6 @@ __all__ = [
     'Quote',
     'Page',
     'Menu',
-    'Feedback'
+    'Feedback',
+    'MapDefault'
 ]
