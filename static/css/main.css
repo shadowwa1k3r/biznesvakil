@@ -2178,3 +2178,9 @@ footer {
 .collapse > ul > li:hover > a{
     color: #ffaa38;
 }
+.uzb path{
+    transition: all 0.2s ease-in-out;
+}
+.uzb path:hover{
+    fill: rgb(0, 0, 71)!important;
+}
