@@ -9,6 +9,7 @@ from .ticker import Ticker
 from .quote import Quote
 from .menu import Menu, Page
 from .feedback import Feedback
+from .ally import Ally
 
 __all__ = [
     'Management',
@@ -26,5 +27,6 @@ __all__ = [
     'Page',
     'Menu',
     'Feedback',
-    'MapDefault'
+    'MapDefault',
+    'Ally'
 ]

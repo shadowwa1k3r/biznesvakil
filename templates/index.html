@@ -509,56 +509,30 @@
             <div class="usefull-main">
                 <div class="carousel-wrap">
                     <div id="usefull" class="owl-carousel">
-                        <div class="item">
+                        {% for ally in allies %}
+
+                            <div class="item">
                             <div class="usefull-item">
                                 <div class="usefull-item__image">
-                                    <img src="{% static 'images/use1.png' %}" alt="">
+                                    <img src="{{ ally.image.url }}" alt="">
                                 </div>
                                 <div class="usefull-item__title">
-                                    <h2>{% trans "Мирзо Улугбекский Инновационный Центр" %}</h2>
+                                    <h2>
+
+                                                    {% if request.LANGUAGE_CODE == 'ru' %}
+                                                        {{ ally.name_ru }}
+                                                    {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                        {{ ally.name_uz }}
+                                                    {% elif request.LANGUAGE_CODE == 'en' %}
+                                                        {{ ally.name_en }}
+                                                    {% endif %}
+                                    </h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="usefull-item">
-                                <div class="usefull-item__image">
-                                    <img src="{% static 'images/use2.png' %}" alt="">
-                                </div>
-                                <div class="usefull-item__title">
-                                    <h2>{% trans "Национальное агентство проектного управления при президенте РУз" %}</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="usefull-item">
-                                <div class="usefull-item__image">
-                                    <img src="{% static 'images/use3.png' %}" alt="">
-                                </div>
-                                <div class="usefull-item__title">
-                                    <h2>{% trans "Республиканская высшая школа бизнеса и управления имени Абу Райхана Беруни" %}</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="usefull-item">
-                                <div class="usefull-item__image">
-                                    <img src="{% static 'images/use4.png' %}" alt="">
-                                </div>
-                                <div class="usefull-item__title">
-                                    <h2>{% trans "Единая система идентификации" %}</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="usefull-item">
-                                <div class="usefull-item__image">
-                                    <img src="{% static 'images/use1.png' %}" alt="">
-                                </div>
-                                <div class="usefull-item__title">
-                                    <h2>{% trans "Мирзо Улугбекский Инновационный Центр" %}</h2>
-                                </div>
-                            </div>
-                        </div>
+
+                        {% endfor %}
+
                     </div>
                 </div>
             </div>
