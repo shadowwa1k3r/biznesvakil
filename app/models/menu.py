@@ -10,6 +10,7 @@ class Menu(models.Model):
     name_en = models.TextField()
     parent = models.ForeignKey(to='Menu', on_delete=models.CASCADE,related_name='s_menu', null=True, blank=True)
     page_alias = models.TextField(null=True, blank=True)
+    link = models.TextField(null=True, blank=True)
     created = models.DateField(auto_now_add=True)
 
     class Meta:
@@ -34,13 +35,19 @@ class Menu(models.Model):
             return True
         return False
 
+    def has_link(self):
+        if self.link:
+            return True
+        return False
+
 
 @receiver(post_save, sender=Menu)
 def create_menu_page(sender, instance, created, **kwargs):
     if created:
         if instance.parent:
-            page = Page.objects.create(menu=instance, content_en=' ', content_uz=' ', content_ru=' ',)
-            page.save()
+            if not instance.link:
+                page = Page.objects.create(menu=instance, content_en=' ', content_uz=' ', content_ru=' ',)
+                page.save()
 
 
 class Page(models.Model):
