@@ -39,7 +39,7 @@ class Menu(models.Model):
 def create_menu_page(sender, instance, created, **kwargs):
     if created:
         if instance.parent:
-            page = Page.objects.create(menu=instance)
+            page = Page.objects.create(menu=instance, content_en=' ', content_uz=' ', content_ru=' ',)
             page.save()
 
 
