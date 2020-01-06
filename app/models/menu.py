@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class Menu(models.Model):
@@ -32,11 +34,17 @@ class Menu(models.Model):
             return True
         return False
 
+@receiver(post_save, sender=Menu)
+def create_menu_page(sender, instance, created, **kwargs):
+    if created:
+        page = Page.objects.create(menu=sender)
+        page.save()
+
 
 class Page(models.Model):
-    content_ru = models.TextField()
-    content_uz = models.TextField()
-    content_en = models.TextField()
+    content_ru = models.TextField(null=True, blank=True)
+    content_uz = models.TextField(null=True, blank=True)
+    content_en = models.TextField(null=True, blank=True)
     menu = models.OneToOneField(Menu, on_delete=models.CASCADE, related_name='menu')
     created = models.DateField(auto_now_add=True)
 
