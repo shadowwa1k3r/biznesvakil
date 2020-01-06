@@ -54,4 +54,4 @@ class Page(models.Model):
         db_table = 'page'
 
     def __str__(self):
-        return self.content_ru
+        return self.menu.name_ru
