@@ -74,7 +74,9 @@
                                 {% if not menu.has_parent %}
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" href="
-                                                    {% if menu.has_alias_without_child %}
+                                                    {% if menu.has_link %}
+                                                        {{ menu.link }}
+                                                    {% elif menu.has_alias_without_child %}
                                                         {% url 'menu' menu.page_alias %}
                                                     {% else %}
                                                         #
@@ -93,7 +95,14 @@
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             {% for s_menu in menu.s_menu.all %}
                                                 <li>
-                                                    <a href="{% url 'menu' s_menu.page_alias %}">
+                                                    <a href="
+                                                            {% if s_menu.has_link %}
+                                                                {{ s_menu.link }}
+                                                            {% else %}
+                                                                {% url 'menu' s_menu.page_alias %}
+                                                            {% endif %}
+
+                                                            ">
                                                         {% if request.LANGUAGE_CODE == 'ru' %}
                                                                 {{ s_menu.name_ru }}
                                                             {% elif request.LANGUAGE_CODE == 'uz' %}
