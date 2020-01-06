@@ -80,13 +80,28 @@
                                                         #
                                                     {% endif %}
                                             " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            {{ menu.name_ru }}
+                                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{ menu.name_ru }}
+                                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{ menu.name_uz }}
+                                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{ menu.name_en }}
+                                                {% endif %}
+
                                         </a>
                                     {% if menu.has_child %}
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             {% for s_menu in menu.s_menu.all %}
                                                 <li>
-                                                    <a href="{% url 'menu' s_menu.page_alias %}">{{ s_menu.name_ru }}</a>
+                                                    <a href="{% url 'menu' s_menu.page_alias %}">
+                                                        {% if request.LANGUAGE_CODE == 'ru' %}
+                                                                {{ s_menu.name_ru }}
+                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                                {{ s_menu.name_uz }}
+                                                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                                                {{ s_menu.name_en }}
+                                                            {% endif %}
+                                                    </a>
                                                 </li>
                                             {% endfor %}
                                         </ul>
