@@ -25,6 +25,11 @@ class Menu(models.Model):
             return True
         return False
 
+    def has_alias_without_child(self):
+        if self.s_menu.all().count() == 0 and len(self.page_alias) > 0:
+            return True
+        return False
+
 
 class Page(models.Model):
     content_ru = models.TextField()

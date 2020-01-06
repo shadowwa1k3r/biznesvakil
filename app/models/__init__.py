@@ -8,6 +8,7 @@ from .number import Numbers
 from .ticker import Ticker
 from .quote import Quote
 from .menu import Menu, Page
+from .feedback import Feedback
 
 __all__ = [
     'Management',
@@ -23,5 +24,6 @@ __all__ = [
     'Ticker',
     'Quote',
     'Page',
-    'Menu'
+    'Menu',
+    'Feedback'
 ]

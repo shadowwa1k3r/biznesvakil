@@ -71,6 +71,8 @@ class MenuView(TemplateView):
             return redirect(reverse('gallery.list.photo'))
         if self.kwargs['page_alias'] == 'video-gallery':
             return redirect(reverse('gallery.list.video'))
+        if self.kwargs['page_alias'] == 'feedback':
+            return redirect(reverse('feedback'))
         return super(MenuView, self).get(request, *args, **kwargs)
 
 
