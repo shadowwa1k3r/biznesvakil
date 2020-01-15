@@ -514,11 +514,13 @@ header {
 
 .home-services .services .service-item>h2 {
     font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    font-size: 22px;
+    font-weight: 500;
+    font-size: 20px;
     color: #000047;
     text-align: center;
-    padding: 15px 0 30px;
+    padding: 15px 0 20px;
+    height: 150px;
+    overflow: hidden;
     margin: 0;
 }
 
@@ -898,9 +900,11 @@ header {
 .features-main>h2 {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 34px;
     color: #fff;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .features-main>p {

@@ -10,6 +10,7 @@ from .quote import Quote
 from .menu import Menu, Page
 from .feedback import Feedback
 from .ally import Ally
+from .footer import Footer
 
 __all__ = [
     'Management',
@@ -28,5 +29,6 @@ __all__ = [
     'Menu',
     'Feedback',
     'MapDefault',
-    'Ally'
+    'Ally',
+    'Footer'
 ]
