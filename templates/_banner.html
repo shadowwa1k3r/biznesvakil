@@ -1,4 +1,5 @@
-{% load static i18n %}
+{% load static i18n custom_filter %}
+{% get_footer as footer %}
  <section class="banner-home">
         <div class="bg"></div>
         <div class="header-banner">
@@ -9,17 +10,25 @@
                         <a href="#">
                             <img src="{% static 'images/logo.png' %}" alt="">
                         </a>
-                        <h2>{% trans "Уполномоченный при Президенте Республики Узбекистан по защите прав и законных интересов субъектов предпринимательства" %}</h2>
+                        <h2>
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                                                {{ footer.header_title_ru }}
+                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                                {{ footer.header_title_uz }}
+                                                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                                                {{ footer.header_title_en }}
+                                                            {% endif %}
+                        </h2>
 
                     </div>
 
                 </div>
                 <div class="header-socials">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-telegram"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
+                    <a href="{{ footer.facebook }}"><i class="fa fa-facebook"></i></a>
+                    <a href="{{ footer.youtube }}"><i class="fa fa-youtube-play"></i></a>
+                    <a href="{{ footer.instagram }}"><i class="fa fa-instagram"></i></a>
+                    <a href="{{ footer.telegram }}"><i class="fa fa-telegram"></i></a>
+                    <a href="{{ footer.twitter }}"><i class="fa fa-twitter"></i></a>
                 </div>
                 <div class="banner-content">
                     <div>

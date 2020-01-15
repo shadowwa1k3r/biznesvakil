@@ -4,7 +4,7 @@ import random
 from django.urls import resolve, reverse, Resolver404
 from django.utils.translation import get_language, activate
 
-from app.models import Ticker, Quote, Menu
+from app.models import Ticker, Quote, Menu, Footer
 from settings import settings
 
 register = template.Library()
@@ -56,3 +56,7 @@ def change_lang(context, lang=None, *args, **kwargs):
 @register.simple_tag()
 def get_languages():
     return settings.LANGS
+
+@register.simple_tag()
+def get_footer():
+    return Footer.objects.first()

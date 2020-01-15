@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% get_menu_list as menulist %}
+{% get_footer as footer %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -160,12 +161,26 @@
                     <div class="col-5">
                         <div class="footer-logo">
                             <img src="{% static 'images/logo.png' %}" alt="">
-                            <span>{% trans "Уполномоченный при Президенте" %} <br>
-                                    {% trans "Республики Узбекистан по защите прав и законных" %} <br>
-                                    {% trans "интересов субъектов предпринимательства" %}</span>
+                            <span>
+                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                                {{ footer.content1_ru }}
+                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                                {{ footer.content1_uz }}
+                                                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                                                {{ footer.content1_en }}
+                                                            {% endif %}
+                            </span>
                         </div>
                         <div class="copy">
-                            <span>© 2019 {% trans "Все права защищены" %}</span>
+                            <span>
+                                 {% if request.LANGUAGE_CODE == 'ru' %}
+                                                                {{ footer.copyright_ru }}
+                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                                {{ footer.copyright_uz }}
+                                                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                                                {{ footer.copyright_en }}
+                                                            {% endif %}
+                            </span>
                         </div>
                     </div>
                     <div class="col-4">
@@ -174,30 +189,42 @@
                             <ul>
                                 <li>
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                    <span>{% trans "100011,г. Ташкент, ул.Навоий шох, дом 4 " %}<br>
-                                                {% blocktrans %}(бывшее здание Министерства сельского
-                                                и водного хозяйства Республики Узбекистан)
-                                        {% endblocktrans %}
+                                    <span>
+                                        {% if request.LANGUAGE_CODE == 'ru' %}
+                                                                {{ footer.address_ru }}
+                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                                {{ footer.address_uz }}
+                                                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                                                {{ footer.address_en }}
+                                                            {% endif %}
                                     </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>(+998) 71 239-25-03</span>
+                                    <span>{{footer.phone}}</span>
                                 </li>
                                 <li>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                    <span>info@biznesvakil.uz</span>
+                                    <span>{{ footer.mail }}</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="footer-socials">
-                            <span>{% trans "Мы в соц.сетях:" %}</span>
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-telegram"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <span>
+                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                                {{ footer.social_ru }}
+                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                                {{ footer.social_uz }}
+                                                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                                                {{ footer.social_en }}
+                                                            {% endif %}
+                            </span>
+                            <a href="{{ footer.facebook }}"><i class="fa fa-facebook"></i></a>
+                            <a href="{{ footer.instagram }}"><i class="fa fa-instagram"></i></a>
+                            <a href="{{ footer.telegram }}"><i class="fa fa-telegram"></i></a>
+                            <a href="{{ footer.twitter }}"><i class="fa fa-twitter"></i></a>
                         </div>
                     </div>
                 </div>

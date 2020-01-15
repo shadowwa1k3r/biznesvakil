@@ -2,7 +2,7 @@ from django.urls import reverse
 from django.views.generic import View, ListView, TemplateView
 from django.shortcuts import render, redirect
 
-from app.models import News, MapData, City, Photo, Video, About, Numbers, Page, MapDefault, Ally
+from app.models import News, MapData, City, Photo, Video, About, Numbers, Page, MapDefault, Ally, Footer
 from app.models.service import Service
 from django.utils.translation import get_language
 
@@ -65,6 +65,7 @@ class IndexView(TemplateView):
         context['photos'] = Photo.objects.all().order_by('created')[:4]
         context['video'] = Video.objects.all().order_by('created')[:2]
         context['numbers'] = Numbers.objects.all().first()
+
 
         return context
 
