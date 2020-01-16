@@ -1,5 +1,5 @@
 {% extends '_base.html' %}
-{% load static i18n %}
+{% load static i18n custom_filter %}
 {% block content %}
     <section class="banner-page" style="background-image: url({% static 'images/slide1.jpg' %})">
         <div class="bg"></div>
@@ -12,7 +12,7 @@
                     <h2>{% trans "Уполномоченный при Президенте Республики Узбекистан по защите прав и законных интересов субъектов предпринимательства"  %}</h2>
                 </div>
                 <div class="page-title">
-                    <h3>{% trans "Руководство" %}</h3>
+{#                    <h3>{% trans "Руководство" %}</h3>#}
                 </div>
             </div>
         </div>
@@ -126,7 +126,45 @@
                                 <h2>Национальная <br>база данных законодательства</h2>
                             </a>
                         </div> -->
-                        {% include '_side_banner.html' %}
+                        <div class="side-quote">
+                                <div class="quote-title">
+                                    {% get_quote as quote %}
+                                    <article>
+                                        <img src="{{ quote.image.url }}" alt="">
+                                    </article>
+                                    <div class="quote-title__info">
+                                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    <h2>{{quote.author_name_ru}}</h2>
+                                                    <span>{{quote.position_ru}}</span>
+                                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    <h2>{{quote.author_name_uz}}</h2>
+                                                    <span>{{quote.position_uz}}</span>
+                                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    <h2>{{quote.author_name_en}}</h2>
+                                                    <span>{{quote.position_en}}</span>
+                                                {% endif %}
+
+                                    </div>
+                                </div>
+                                <div class="quote-content">
+                                    <p>
+                                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{quote.content_ru}}
+                                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{quote.content_uz}}
+                                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{quote.content_en}}
+                                                {% endif %}
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="side-year" data-aos="zoom-in">
+                                <article>
+                                    <img src="{% static 'images/banner.png' %}" alt="">
+                                </article>
+
+                            </div>
 
                     </div>
                 </div>
