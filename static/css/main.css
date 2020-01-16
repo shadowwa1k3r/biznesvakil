@@ -2210,3 +2210,6 @@ footer {
     background-color:#fff;
     z-index:1
 }
+.uzb path:hover{
+fill: rgb(0, 0, 71);
+}
