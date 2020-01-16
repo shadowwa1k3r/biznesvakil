@@ -143,7 +143,7 @@ LOCALE_PATHS = [
 LANGS = {
     "en":"English",
     "ru":"Русский",
-    "uz":"Узбекча",
+    "uz":"Ўзбекча",
 }
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
