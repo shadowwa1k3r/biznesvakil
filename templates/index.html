@@ -3,13 +3,30 @@
 {% load i18n %}
 {% load custom_filter %}
 {% block content %}
+    {% get_footer as footer %}
     <section class="home-news">
         <div class="container">
             <div class="row">
                 <div class="col-9">
                     <div class="title">
-                        <h2>{% trans "Последние новости"%}</h2>
-                        <a href="{% url 'news.list' %}">{% trans "Все новости" %}</a>
+                        <h2>
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{ footer.news1_ru }}
+                                                    {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{ footer.news1_uz }}
+                                                    {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{ footer.news1_en }}
+                                                {% endif %}
+                        </h2>
+                        <a href="{% url 'news.list' %}">
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{ footer.news2_ru }}
+                                                    {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{ footer.news2_uz }}
+                                                    {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{ footer.news2_en }}
+                                                {% endif %}
+                        </a>
                     </div>
                     <div class="home-news__top">
                         <div class="main-row">
@@ -22,14 +39,14 @@
                                         </article>
                                         <div class="home-news__title">
                                             <span>{{ post.created }}</span>
-                                            <p>{% if request.LANGUAGE_CODE == 'ru' %}
-                                                {{ post.title_ru }}
-                                                {% elif request.LANGUAGE_CODE == 'uz' %}
-                                                {{ post.title_uz }}
-                                                {% elif request.LANGUAGE_CODE == 'en' %}
-                                                {{ post.title_en }}
-
-                                            {% endif %}
+                                            <p>
+                                                {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{ post.title_ru }}
+                                                    {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{ post.title_uz }}
+                                                    {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{ post.title_en }}
+                                                {% endif %}
                                         </p>
                                         </div>
                                     </a>
@@ -109,22 +126,26 @@
                                 </div>
 
                             </div>
+                    {% for banner in banners %}
                         <div class="news-banner__item" data-aos="zoom-in-right">
                             <a href="#">
                                 <article>
-                                    <img src="{% static 'images/symbols.png' %}" alt="">
+                                    <img src="{{banner.file.url}}" alt="">
                                 </article>
-                                <h2>{% trans "Государственные символы" %}</h2>
+                                <h2>
+                                     {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{ banner.title_ru }}
+                                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{ banner.title_uz }}
+                                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{ banner.title_en }}
+                                                {% endif %}
+                                </h2>
                             </a>
                         </div>
-                        <div class="news-banner__item" style="margin-bottom: 0;" data-aos="zoom-in-left">
-                            <a href="#">
-                                <article>
-                                    <img src="{% static 'images/lex.png' %}" alt="">
-                                </article>
-                                <h2>{% trans "Национальная" %} <br>{% trans "база данных законодательства" %}</h2>
-                            </a>
-                        </div>
+                    {% endfor %}
+
+
                     </div>
                 </div>
             </div>
@@ -386,7 +407,15 @@
                 <div class="col-8">
                     <div class="title">
                         <h2>{% trans "Фото" %}</h2>
-                        <a href="{% url 'gallery.list.photo' %}">{% trans "Все фото" %}</a>
+                        <a href="{% url 'gallery.list.photo' %}">
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{ footer.photo_ru }}
+                                                    {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{ footer.photo_uz }}
+                                                    {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{ footer.photo_en }}
+                                                {% endif %}
+                        </a>
                     </div>
                     <div class="home-gallery">
                         <div class="main-row">
@@ -479,7 +508,15 @@
                 <div class="col-4">
                     <div class="title">
                         <h2>{% trans "Видео" %}</h2>
-                        <a href="{% url 'gallery.list.video' %}">{% trans "Все видео" %}</a>
+                        <a href="{% url 'gallery.list.video' %}">
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                                    {{ footer.video_ru }}
+                                                    {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                    {{ footer.video_uz }}
+                                                    {% elif request.LANGUAGE_CODE == 'en' %}
+                                                    {{ footer.video_en }}
+                                                {% endif %}
+                        </a>
                     </div>
                     <div class="home-videos">
                         <div class="home-video__item" data-aos="flip-up" data-aos-delay="1200">

@@ -24,7 +24,18 @@ class Footer(models.Model):
     copyright_ru = models.TextField(null=True, blank=True)
     copyright_uz = models.TextField(null=True, blank=True)
     copyright_en = models.TextField(null=True, blank=True)
-
+    photo_ru = models.TextField(null=True, blank=True)
+    photo_uz = models.TextField(null=True, blank=True)
+    photo_en = models.TextField(null=True, blank=True)
+    video_ru = models.TextField(null=True, blank=True)
+    video_uz = models.TextField(null=True, blank=True)
+    video_en = models.TextField(null=True, blank=True)
+    news1_ru = models.TextField(null=True, blank=True)
+    news1_uz = models.TextField(null=True, blank=True)
+    news1_en = models.TextField(null=True, blank=True)
+    news2_ru = models.TextField(null=True, blank=True)
+    news2_uz = models.TextField(null=True, blank=True)
+    news2_en = models.TextField(null=True, blank=True)
 
     class Meta:
         db_table = 'footer'

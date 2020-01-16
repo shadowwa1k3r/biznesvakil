@@ -11,6 +11,7 @@ from .menu import Menu, Page
 from .feedback import Feedback
 from .ally import Ally
 from .footer import Footer
+from .banner import SideBanner
 
 __all__ = [
     'Management',
@@ -30,5 +31,6 @@ __all__ = [
     'Feedback',
     'MapDefault',
     'Ally',
-    'Footer'
+    'Footer',
+    'SideBanner'
 ]
