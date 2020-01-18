@@ -12,7 +12,7 @@
                         <a href="{% url 'index' %}">
                             <img src="{% static 'images/logo.png' %}" alt="">
                         </a>
-                        <h2>{% trans "Уполномоченный при Президенте Республики Узбекистан по защите прав и законных интересов субъектов предпринимательства" %}</h2>
+                        {% include '_header_title.html' %}
                     </div>
                     <div class="page-title">
                         <h3>{% trans "Новости" %}</h3>
