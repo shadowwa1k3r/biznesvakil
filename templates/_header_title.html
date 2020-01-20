@@ -1,3 +1,11 @@
 {% load custom_filter %}
-{% get_footer as footer %}
-<h2></h2>
+{% get_footer as footer2 %}
+<h2>
+     {% if request.LANGUAGE_CODE == 'ru' %}
+                                                                {{ footer2.header_title_ru }}
+                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                                {{ footer2.header_title_uz }}
+                                                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                                                {{ footer2.header_title_en }}
+                                                            {% endif %}
+</h2>

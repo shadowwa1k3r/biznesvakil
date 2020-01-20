@@ -36,6 +36,12 @@ class Footer(models.Model):
     news2_ru = models.TextField(null=True, blank=True)
     news2_uz = models.TextField(null=True, blank=True)
     news2_en = models.TextField(null=True, blank=True)
+    obratnaya_svyaz_ru = models.TextField(null=True, blank=True)
+    obratnaya_svyaz_uz = models.TextField(null=True, blank=True)
+    obratnaya_svyaz_en = models.TextField(null=True, blank=True)
+    obratnaya_svyaz_prinyato_ru = models.TextField(null=True, blank=True)
+    obratnaya_svyaz_prinyato_uz = models.TextField(null=True, blank=True)
+    obratnaya_svyaz_prinyato_en = models.TextField(null=True, blank=True)
 
     class Meta:
         db_table = 'footer'

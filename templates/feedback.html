@@ -1,5 +1,6 @@
 {% extends '_base.html' %}
-{% load static i18n %}
+{% load static i18n custom_filter %}
+{% get_footer as footer %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,7 +20,15 @@
                         {% include '_header_title.html' %}
                     </div>
                     <div class="page-title">
-                        <h3>{% trans 'Обратная связь' %}</h3>
+                        <h3>
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                {{ footer.obratnaya_svyaz_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                {{ footer.obratnaya_svyaz_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ footer.obratnaya_svyaz_en }}
+                            {% endif %}
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -34,8 +43,24 @@
 
 
                         <div class="col-md-6">
-							<h3 class="mb-sm mt-sm">Обратная связь                                    {% if status %}
-                                                    <h6 style="color: #ff0a13">Ваше сообщение было принято. Спасибо за обращение</h6>
+							<h3 class="mb-sm mt-sm">
+                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                {{ footer.obratnaya_svyaz_ru }}
+                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                {{ footer.obratnaya_svyaz_uz }}
+                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                {{ footer.obratnaya_svyaz_en }}
+                            {% endif %}
+                                {% if status %}
+                                                    <h6 style="color: #ff0a13">
+                                                        {% if request.LANGUAGE_CODE == 'ru' %}
+                                                            {{ footer.obratnaya_svyaz_prinyato_ru }}
+                                                        {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                            {{ footer.obratnaya_svyaz_prinyato_uz }}
+                                                        {% elif request.LANGUAGE_CODE == 'en' %}
+                                                            {{ footer.obratnaya_svyaz_prinyato_en }}
+                                                        {% endif %}
+                                                    </h6>
                                                 {% endif %}</h3>
                <form  method="post" class="contacts-page"><div style="display:none">
 {% csrf_token %}
@@ -43,11 +68,11 @@
 
 									<div class="form-group"><div class="row">
 										<div class="col-md-6">
-											<label>Имя *</label>
+											<label>{% trans 'Имя *' %}</label>
 											<input type="text" maxlength="100" class="form-control" name="name" id="name" required="">
 										</div>
 										<div class="col-md-6">
-											<label>Э-почта *</label>
+											<label>{% trans 'Э-почта *'%}</label>
 											<input type="email" maxlength="100" class="form-control" name="pochta" id="email" required="">
 										</div>
 									</div>
@@ -55,7 +80,7 @@
 
 									<div class="form-group"><div class="row">
 										<div class="col-md-12">
-											<label>Телефон</label>
+											<label>{% trans 'Телефон' %}</label>
 											<input type="text" onkeypress="validate(event)" maxlength="100" class="form-control" name="phone" id="phone" required="">
 										</div>
 									</div>
@@ -63,7 +88,7 @@
 
 									<div class="form-group"><div class="row">
 										<div class="col-md-12">
-											<label>Сообщение *</label>
+											<label>{% trans 'Сообщение *' %}</label>
 											<textarea maxlength="5000" rows="10" class="form-control" name="message" id="message" required=""></textarea>
 										</div>
 									</div>
@@ -86,7 +111,7 @@
 {#                                            </div>#}
                                             <div class="col-md-4">
                         <div class="submer-contact">
-    										<button type="submit" class="btn contact-btn pull-right"><i class="fa fa-paper-plane"></i> Отправить</button>
+    										<button type="submit" class="btn contact-btn pull-right"><i class="fa fa-paper-plane"></i>{% trans ' Отправить' %}</button>
     									</div>
 
                                         </div>
@@ -108,12 +133,7 @@
                                     <li>
                                         <a href="{% url 'news.list' %}" class="active" >{% trans "Новости" %}</a>
                                     </li>
-                                    <li>
-                                        <a href="#">{% trans "Пресс-релизы" %}</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">{% trans "Статьи" %}</a>
-                                    </li>
+
                                     <li>
                                         <a href="{% url 'gallery.list.photo' %}" >{% trans "Фотогалерея" %}</a>
                                     </li>

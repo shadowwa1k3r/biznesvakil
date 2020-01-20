@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 10:27+0500\n"
+"POT-Creation-Date: 2020-01-20 13:09+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,86 +32,87 @@ msgstr ""
 msgid "Biznes Ombudsman"
 msgstr ""
 
-#: .\templates\_side_banner.html:40
-msgid "2019 - Год активных инвестиций и социального развития"
-msgstr "2019 - Aktiv investitsiyalar va ommaviy rivojlanish yili"
+#: .\templates\feedback.html:71
+msgid "Имя *"
+msgstr "Ф.И.Ш. *"
 
-#: .\templates\feedback.html:22
-msgid "Обратная связь"
-msgstr "Biz bilan bog'laning"
+#: .\templates\feedback.html:75
+#, fuzzy
+#| msgid "Э-Почта"
+msgid "Э-почта *"
+msgstr "Э-почта *"
 
-#: .\templates\feedback.html:106 .\templates\gallery.html:99
+#: .\templates\feedback.html:83 .\templates\manage.html:48
+#: .\templates\manage.html:78
+msgid "Телефон"
+msgstr "Телефон"
+
+#: .\templates\feedback.html:91
+#, fuzzy
+#| msgid "Подробнее"
+msgid "Сообщение *"
+msgstr "Батафсил"
+
+#: .\templates\feedback.html:114
+msgid " Отправить"
+msgstr "Жўнатиш"
+
+#: .\templates\feedback.html:131 .\templates\gallery.html:99
 #: .\templates\manage.html:94 .\templates\news.html:66
 #: .\templates\news_view.html:88 .\templates\static.html:37
 #: .\templates\video.html:63
 msgid "Пресс служба"
-msgstr "Pressa xizmati"
+msgstr "Пресса хизмати"
 
-#: .\templates\feedback.html:109 .\templates\gallery.html:102
+#: .\templates\feedback.html:134 .\templates\gallery.html:102
 #: .\templates\manage.html:97 .\templates\news.html:23
 #: .\templates\news.html:69 .\templates\news_view.html:18
 #: .\templates\news_view.html:91 .\templates\static.html:40
 #: .\templates\video.html:66
 msgid "Новости"
-msgstr "Yangiliklar"
+msgstr "Янгиликлар"
 
-#: .\templates\feedback.html:112 .\templates\gallery.html:105
-#: .\templates\manage.html:100 .\templates\news.html:72
-#: .\templates\news_view.html:94 .\templates\static.html:43
-#: .\templates\video.html:69
-msgid "Пресс-релизы"
-msgstr "Press-reliz"
-
-#: .\templates\feedback.html:115 .\templates\gallery.html:108
-#: .\templates\manage.html:103 .\templates\news.html:75
-#: .\templates\news_view.html:97 .\templates\static.html:46
-#: .\templates\video.html:72
-msgid "Статьи"
-msgstr "Maqolalar"
-
-#: .\templates\feedback.html:118 .\templates\gallery.html:15
-#: .\templates\gallery.html:111 .\templates\manage.html:106
-#: .\templates\news.html:78 .\templates\news_view.html:100
-#: .\templates\static.html:49 .\templates\video.html:75
+#: .\templates\feedback.html:138 .\templates\gallery.html:15
+#: .\templates\gallery.html:106 .\templates\manage.html:101
+#: .\templates\news.html:73 .\templates\news_view.html:95
+#: .\templates\static.html:44 .\templates\video.html:70
 msgid "Фотогалерея"
-msgstr "Fotogalereya"
+msgstr "Фотогалерея"
 
-#: .\templates\feedback.html:121 .\templates\gallery.html:114
-#: .\templates\manage.html:109 .\templates\news.html:81
-#: .\templates\news_view.html:103 .\templates\static.html:52
-#: .\templates\video.html:15 .\templates\video.html:78
-msgid "Videogalereya"
-msgstr ""
+#: .\templates\feedback.html:141 .\templates\gallery.html:109
+#: .\templates\manage.html:104 .\templates\news.html:76
+#: .\templates\news_view.html:98 .\templates\static.html:47
+#: .\templates\video.html:15 .\templates\video.html:73
+#, fuzzy
+#| msgid "Фотогалерея"
+msgid "Видеогалерея"
+msgstr "Видеогалерея"
 
 #: .\templates\index.html:409
 msgid "Фото"
-msgstr "Foto"
+msgstr "Фото"
 
 #: .\templates\index.html:510
 msgid "Видео"
-msgstr "Video"
+msgstr "Видео"
 
 #: .\templates\manage.html:38 .\templates\manage.html:42
 #: .\templates\manage.html:46 .\templates\manage.html:68
 #: .\templates\manage.html:72 .\templates\manage.html:76
 msgid "Дни приема"
-msgstr "Qabul kunlari"
-
-#: .\templates\manage.html:48 .\templates\manage.html:78
-msgid "Телефон"
-msgstr "Telefon"
+msgstr "Қабул кунлари"
 
 #: .\templates\manage.html:49 .\templates\manage.html:79
 msgid "Э-Почта"
-msgstr "E-pochta"
+msgstr "Э-Почта"
 
 #: .\templates\manage.html:51 .\templates\manage.html:59
 msgid "Подробнее"
-msgstr "Batafsil"
+msgstr "Батафсил"
 
 #: .\templates\news_view.html:70
 msgid "Поделиться"
-msgstr "Bo'lishish"
+msgstr "Бўлишиш"
 
 #: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
 msgid "Messages"
@@ -1296,6 +1297,18 @@ msgstr ""
 #: .\venv\Lib\site-packages\django_summernote\views.py:160
 msgid "Failed to save attachment"
 msgstr ""
+
+#~ msgid "2019 - Год активных инвестиций и социального развития"
+#~ msgstr "2019 - Aktiv investitsiyalar va ommaviy rivojlanish yili"
+
+#~ msgid "Обратная связь"
+#~ msgstr "Biz bilan bog'laning"
+
+#~ msgid "Пресс-релизы"
+#~ msgstr "Press-reliz"
+
+#~ msgid "Статьи"
+#~ msgstr "Maqolalar"
 
 #~ msgid ""
 #~ "Уполномоченный при Президенте Республики Узбекистан по защите прав и "
