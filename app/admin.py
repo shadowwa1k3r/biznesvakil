@@ -8,7 +8,7 @@ class PageAdmin(SummernoteModelAdmin):
     summernote_fields = '__all__'
 
 admin.site.register(Management)
-admin.site.register(News)
+admin.site.register(News, PageAdmin)
 admin.site.register(Service)
 admin.site.register(NewsFiles)
 admin.site.register(City)
