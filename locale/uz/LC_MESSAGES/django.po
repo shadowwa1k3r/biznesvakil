@@ -49,7 +49,6 @@ msgstr "Телефон"
 
 #: .\templates\feedback.html:91
 #, fuzzy
-#| msgid "Подробнее"
 msgid "Ваше сообщение *"
 msgstr "Сизнинг хабарингиз"
 
