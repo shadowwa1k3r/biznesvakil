@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-01-20 13:09+0500\n"
+"POT-Creation-Date: 2020-01-22 15:18+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,8 +50,8 @@ msgstr "Phone"
 #: .\templates\feedback.html:91
 #, fuzzy
 #| msgid "Подробнее"
-msgid "Сообщение *"
-msgstr "Message *"
+msgid "Ваше сообщение *"
+msgstr "Your Message *"
 
 #: .\templates\feedback.html:114
 msgid " Отправить"
@@ -59,7 +59,7 @@ msgstr " Send"
 
 #: .\templates\feedback.html:131 .\templates\gallery.html:99
 #: .\templates\manage.html:94 .\templates\news.html:66
-#: .\templates\news_view.html:88 .\templates\static.html:37
+#: .\templates\news_view.html:88 .\templates\static.html:53
 #: .\templates\video.html:63
 msgid "Пресс служба"
 msgstr "Press service"
@@ -67,7 +67,7 @@ msgstr "Press service"
 #: .\templates\feedback.html:134 .\templates\gallery.html:102
 #: .\templates\manage.html:97 .\templates\news.html:23
 #: .\templates\news.html:69 .\templates\news_view.html:18
-#: .\templates\news_view.html:91 .\templates\static.html:40
+#: .\templates\news_view.html:91 .\templates\static.html:56
 #: .\templates\video.html:66
 msgid "Новости"
 msgstr "News"
@@ -75,13 +75,13 @@ msgstr "News"
 #: .\templates\feedback.html:138 .\templates\gallery.html:15
 #: .\templates\gallery.html:106 .\templates\manage.html:101
 #: .\templates\news.html:73 .\templates\news_view.html:95
-#: .\templates\static.html:44 .\templates\video.html:70
+#: .\templates\static.html:60 .\templates\video.html:70
 msgid "Фотогалерея"
 msgstr "Photogallery"
 
 #: .\templates\feedback.html:141 .\templates\gallery.html:109
 #: .\templates\manage.html:104 .\templates\news.html:76
-#: .\templates\news_view.html:98 .\templates\static.html:47
+#: .\templates\news_view.html:98 .\templates\static.html:63
 #: .\templates\video.html:15 .\templates\video.html:73
 msgid "Видеогалерея"
 msgstr "Videogallery"
