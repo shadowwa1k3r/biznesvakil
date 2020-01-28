@@ -39,7 +39,6 @@ msgid "Имя *"
 msgstr "Имя *"
 
 #: .\templates\feedback.html:75
-#, fuzzy
 #| msgid "Э-Почта"
 msgid "Э-почта *"
 msgstr "Э-Почта"
@@ -50,7 +49,6 @@ msgid "Телефон"
 msgstr "Телефон"
 
 #: .\templates\feedback.html:91
-#, fuzzy
 
 msgid "Ваше сообщение *"
 msgstr "Ваше сообщение *"
