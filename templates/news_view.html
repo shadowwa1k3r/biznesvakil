@@ -58,11 +58,11 @@
                             <div class="news-content">
 
                                 {% if request.LANGUAGE_CODE == 'ru' %}
-                                                {{new.content_ru}}
+                                                {{new.content_ru|safe}}
                                                 {% elif request.LANGUAGE_CODE == 'uz' %}
-                                                {{new.content_uz}}
+                                                {{new.content_uz|safe}}
                                                 {% elif request.LANGUAGE_CODE == 'en' %}
-                                                {{new.content_en}}
+                                                {{new.content_en|safe}}
                                             {% endif %}
                             </div>
                             <div class="footer-content">
