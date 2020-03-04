@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="{% static 'js/mmenu/mmenu.css' %}">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/media.css' %}">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+          rel="stylesheet">
 
     <script src="{% static 'js/jquery.js' %}"></script>
     <script src="{% static 'bootstrap/js/popper.min.js' %}"></script>
@@ -62,7 +63,8 @@
                     </ul>
                 </nav>
                 <nav class="navbar navbar-light navbar-expand-lg mainmenu">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -80,20 +82,21 @@
                                                     {% else %}
                                                         #
                                                     {% endif %}
-                                            " id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                              {% if request.LANGUAGE_CODE == 'ru' %}
-                                                    {{ menu.name_ru }}
-                                                {% elif request.LANGUAGE_CODE == 'uz' %}
-                                                    {{ menu.name_uz }}
-                                                {% elif request.LANGUAGE_CODE == 'en' %}
-                                                    {{ menu.name_en }}
-                                                {% endif %}
+                                            " id="navbarDropdown" role="button" data-toggle="dropdown"
+                                           aria-haspopup="true" aria-expanded="false">
+                                            {% if request.LANGUAGE_CODE == 'ru' %}
+                                                {{ menu.name_ru }}
+                                            {% elif request.LANGUAGE_CODE == 'uz' %}
+                                                {{ menu.name_uz }}
+                                            {% elif request.LANGUAGE_CODE == 'en' %}
+                                                {{ menu.name_en }}
+                                            {% endif %}
                                         </a>
-                                    {% if menu.has_child %}
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            {% for s_menu in menu.s_menu.all %}
-                                                <li>
-                                                    <a href="
+                                        {% if menu.has_child %}
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                {% for s_menu in menu.s_menu.all %}
+                                                    <li>
+                                                        <a href="
                                                             {% if s_menu.has_link %}
                                                                 {{ s_menu.link }}
                                                             {% else %}
@@ -109,11 +112,11 @@
                                                             {% elif request.LANGUAGE_CODE == 'en' %}
                                                                 {{ s_menu.name_en }}
                                                             {% endif %}
-                                                    </a>
-                                                </li>
-                                            {% endfor %}
-                                        </ul>
-                                    {% endif %}
+                                                        </a>
+                                                    </li>
+                                                {% endfor %}
+                                            </ul>
+                                        {% endif %}
                                     </li>
                                 {% endif %}
 
@@ -127,7 +130,10 @@
                     <div class="language">
                         <ul class="navbar-nav mr-auto">
                             <li class="dropdown">
-                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i class="fa fa-globe" aria-hidden="true"></i> {{ langs|get_item:request.LANGUAGE_CODE }}</span></a>
+                                <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span><i
+                                        class="fa fa-globe"
+                                        aria-hidden="true"></i> {{ langs|get_item:request.LANGUAGE_CODE }}</span></a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     {% for key,value in langs.items %}
                                         {% ifequal key request.LANGUAGE_CODE %}
@@ -163,23 +169,23 @@
                             <img src="{% static 'images/logo.png' %}" alt="">
                             <span>
                                 {% if request.LANGUAGE_CODE == 'ru' %}
-                                                                {{ footer.content1_ru }}
-                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
-                                                                {{ footer.content1_uz }}
-                                                            {% elif request.LANGUAGE_CODE == 'en' %}
-                                                                {{ footer.content1_en }}
-                                                            {% endif %}
+                                    {{ footer.content1_ru }}
+                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                    {{ footer.content1_uz }}
+                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                    {{ footer.content1_en }}
+                                {% endif %}
                             </span>
                         </div>
                         <div class="copy">
                             <span>
                                  {% if request.LANGUAGE_CODE == 'ru' %}
-                                                                {{ footer.copyright_ru }}
-                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
-                                                                {{ footer.copyright_uz }}
-                                                            {% elif request.LANGUAGE_CODE == 'en' %}
-                                                                {{ footer.copyright_en }}
-                                                            {% endif %}
+                                     {{ footer.copyright_ru }}
+                                 {% elif request.LANGUAGE_CODE == 'uz' %}
+                                     {{ footer.copyright_uz }}
+                                 {% elif request.LANGUAGE_CODE == 'en' %}
+                                     {{ footer.copyright_en }}
+                                 {% endif %}
                             </span>
                         </div>
                     </div>
@@ -191,17 +197,17 @@
                                     <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     <span>
                                         {% if request.LANGUAGE_CODE == 'ru' %}
-                                                                {{ footer.address_ru }}
-                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
-                                                                {{ footer.address_uz }}
-                                                            {% elif request.LANGUAGE_CODE == 'en' %}
-                                                                {{ footer.address_en }}
-                                                            {% endif %}
+                                            {{ footer.address_ru }}
+                                        {% elif request.LANGUAGE_CODE == 'uz' %}
+                                            {{ footer.address_uz }}
+                                        {% elif request.LANGUAGE_CODE == 'en' %}
+                                            {{ footer.address_en }}
+                                        {% endif %}
                                     </span>
                                 </li>
                                 <li>
                                     <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <span>{{footer.phone}}</span>
+                                    <span>{{ footer.phone }}</span>
                                 </li>
                                 <li>
                                     <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -214,12 +220,12 @@
                         <div class="footer-socials">
                             <span>
                                 {% if request.LANGUAGE_CODE == 'ru' %}
-                                                                {{ footer.social_ru }}
-                                                            {% elif request.LANGUAGE_CODE == 'uz' %}
-                                                                {{ footer.social_uz }}
-                                                            {% elif request.LANGUAGE_CODE == 'en' %}
-                                                                {{ footer.social_en }}
-                                                            {% endif %}
+                                    {{ footer.social_ru }}
+                                {% elif request.LANGUAGE_CODE == 'uz' %}
+                                    {{ footer.social_uz }}
+                                {% elif request.LANGUAGE_CODE == 'en' %}
+                                    {{ footer.social_en }}
+                                {% endif %}
                             </span>
                             <a href="{{ footer.facebook }}"><i class="fa fa-facebook"></i></a>
                             <a href="{{ footer.instagram }}"><i class="fa fa-instagram"></i></a>
@@ -237,7 +243,7 @@
 <script src="{% static 'js/mmenu/mmenu.polyfills.js' %}"></script>
 <script src="{% static 'js/mmenu/mmenu.js' %}"></script>
 <script>
-    new Mmenu( document.querySelector( '#mobileMenu' ));
+    new Mmenu(document.querySelector('#mobileMenu'));
 
     $('#usefull').owlCarousel({
         loop: true,
