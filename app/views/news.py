@@ -8,6 +8,9 @@ class NewsListView(ListView):
     context_object_name = 'news'
     template_name = 'news.html'
 
+    def get_queryset(self):
+        return News.objects.all().order_by('-created')
+
 
 class NewsDetailView(DetailView):
     model = News

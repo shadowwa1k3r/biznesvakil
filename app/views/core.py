@@ -52,7 +52,7 @@ class IndexView(TemplateView):
         #     'UZ-BU': regions['bukhara'][lang]
         # }
 
-        news = News.objects.all().order_by('created')[:5]
+        news = News.objects.all().order_by('-created')[:5]
         context['header_news'] = news[0:2]
         context['footer_news'] = news[2:5]
         context['services'] = Service.objects.all()
@@ -62,8 +62,8 @@ class IndexView(TemplateView):
 
         if About.objects.all().count()>0:
             context['about'] = About.objects.all().first()
-        context['photos'] = Photo.objects.all().order_by('created')[:4]
-        context['video'] = Video.objects.all().order_by('created')[:2]
+        context['photos'] = Photo.objects.all().order_by('-created')[:4]
+        context['video'] = Video.objects.all().order_by('-created')[:2]
         context['numbers'] = Numbers.objects.all().first()
         context['numbers'] = Numbers.objects.all().first()
         context['banners'] = SideBanner.objects.all()[:2]

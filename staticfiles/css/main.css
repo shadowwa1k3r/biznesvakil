@@ -1,5 +1,5 @@
 body {
-    font-family: 'Gilroy', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     background: #f2f2ff;
 }
@@ -35,7 +35,7 @@ body {
     font-size: 28px;
     color: #000047;
     margin: 0;
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
 }
 
@@ -373,7 +373,7 @@ header {
 }
 
 .banner-info .header-banner__main>h2 {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 25px;
     color: #fff;
@@ -428,7 +428,7 @@ header {
 }
 
 .banner-content>div>h2 {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 32px;
     color: #fff;
@@ -458,9 +458,8 @@ header {
 .home-services {
     margin-top: -145px;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     padding: 0;
-    overflow: hidden;
 }
 
 .home-services .services {
@@ -514,17 +513,19 @@ header {
 }
 
 .home-services .services .service-item>h2 {
-    font-family: "Gilroy", sans-serif;
-    font-weight: 600;
-    font-size: 22px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
     color: #000047;
     text-align: center;
-    padding: 15px 0 30px;
+    padding: 15px 0 20px;
+    height: 150px;
+    overflow: hidden;
     margin: 0;
 }
 
 .home-services .services .service-item>span {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
     color: #505050;
@@ -799,14 +800,14 @@ header {
     overflow: hidden;
 }
 .home-about__content .about-title > span{
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 21px;
     color: #000047;
     display: block;
 }
 .home-about__content .about-title > h2{
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 36px;
     color: #000047;
@@ -897,15 +898,17 @@ header {
 }
 
 .features-main>h2 {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 34px;
     color: #fff;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .features-main>p {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 22px;
     color: #fff;
@@ -958,7 +961,7 @@ header {
     font-weight: 600;
 }
 .features-main .features .features-item>span {
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 19px;
     color: #fff;
@@ -1469,7 +1472,7 @@ footer {
     margin: 15px 0 15px;
 }
 .page-banner__content > h2{
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 22px;
     color: #fff;
@@ -1480,7 +1483,7 @@ footer {
     padding: 30px 0;
 }
 .page-banner .page-title > h3{
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     font-size: 24px;
     color: #f79005;
@@ -1590,7 +1593,7 @@ footer {
 }
 .side-banner .side-menu > h2{
     font-size: 24px;
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #000047;
     font-weight: 500;
 }
@@ -1747,7 +1750,7 @@ footer {
 .side-quote .quote-content {
     position: relative;
     padding: 50px 5px 25px;
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #000047;
     font-style: italic;
     font-weight: 600;
@@ -2063,7 +2066,7 @@ footer {
   }
   .guides .modal-title{
     font-size: 24px;
-    font-family: "Gilroy", sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: #000047;
     font-weight: 500;
   }
@@ -2168,4 +2171,45 @@ footer {
 }
 .mm-wrapper__blocker {
     background: rgba(0, 0, 0, 0.75);
+}
+.mainmenu ul.navbar-nav ul.dropdown-menu li>a,
+.collapse > ul > li > a{
+    transition: color 0.1s ease-in-out;
+}
+.mainmenu ul.navbar-nav ul.dropdown-menu li>a:hover,
+.collapse > ul > li:hover > a{
+    color: #ffaa38;
+}
+
+
+.region-content{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.region-content::-webkit-scrollbar-track{
+    -webkit-box-shadow:inset 0 0 2px rgba(0,0,0,.1);
+    border-radius:4px;
+    background-color:#efefef
+}
+.region-content::-webkit-scrollbar{
+    width:6px;
+    background-color:#efefef
+}
+.region-content::-webkit-scrollbar-thumb{
+    box-shadow:inset 0 0 2px rgba(0,0,0,.1);
+    border-radius:4px;
+    background-color:#000047
+}
+.region-content.dark::-webkit-scrollbar,
+.region-content.dark::-webkit-scrollbar-track{
+    background-color:transparent
+}
+.region-content.dark::-webkit-scrollbar-thumb{
+    background-color:#fff;
+    z-index:1
+}
+.uzb path:hover{
+fill: rgb(0, 0, 71);
 }
