@@ -126,6 +126,18 @@
                             </div>
 
                         </div>
+                        <div class="side-quote">
+                            <h4>Проверка инспектора</h4>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" name="uid" class="form-control" id="uid" placeholder="Код инспектора">
+                                </div>
+                                
+                                <button data-url="{% url 'inspector.check' %}" id="uid-send" type="submit" class="btn btn-primary" style="margin:0 auto; display:table; width:50%">Проверить</button>
+                            </form>
+                            
+
+                        </div>
                         {% for banner in banners %}
                             <div class="news-banner__item" data-aos="zoom-in-right">
                                 <a href="#">
@@ -585,4 +597,5 @@
             </div>
         </div>
     </section>
+{% include '_uid_script.html' %}
 {% endblock %}

@@ -1,7 +1,10 @@
+from django.http.response import HttpResponse
 from django.urls import reverse
 from django.views.generic import View, ListView, TemplateView
 from django.shortcuts import render, redirect
-
+import json
+from requests.auth import HTTPBasicAuth
+import requests
 from app.models import News, MapData, City, Photo, Video, About, Numbers, Page, MapDefault, Ally, Footer, SideBanner
 from app.models.service import Service
 from django.utils.translation import get_language
@@ -93,3 +96,9 @@ class MenuView(TemplateView):
         page = Page.objects.get(menu__page_alias=self.kwargs['page_alias'])
         context['page'] = page
         return context
+
+class InspectorCheckView(View):
+    def post(self, request):
+        uid = self.request.POST.get('uid')
+        r = requests.get(f'http://tt.biznesvakil.uz/api/external/verification/{uid}', auth=HTTPBasicAuth('bo_inn_api', 'Qwerty123$'))
+        return HttpResponse(r.json(), content_type='application/json')

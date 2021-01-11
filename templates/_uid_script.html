@@ -1,0 +1,30 @@
+<script>
+    $(document).ready(function () {
+            $("#uid-send").click(function (e) {
+                e.preventDefault();
+
+                let formData = new FormData();
+
+                formData.append('uid', $('input[name="uid"]').val());
+                
+                var url = $("#uid-send").data("url");
+                $.ajax({
+                    headers: {"X-CSRFToken": "{{csrf_token}}"},
+                    url: url,
+                    processData: false,
+                    contentType: false,
+                    method: 'POST',
+                    data: formData,
+                    success: function (data) {
+                        // window.location.href = '/first-aid/list';
+                        alert(data)
+                    },
+                    error: function (data) {
+                        alert('Error');
+                    }
+                });
+
+            })
+        });
+    </script>
+</script>
