@@ -100,5 +100,5 @@ class MenuView(TemplateView):
 class InspectorCheckView(View):
     def post(self, request):
         uid = self.request.POST.get('uid')
-        r = requests.get(f'http://tt.biznesvakil.uz/api/external/verification/{uid}', auth=HTTPBasicAuth('bo_inn_api', 'Qwerty123$'))
+        r = requests.get(f'http://api.biznesvakil.uz/api/external/verification/{uid}', auth=HTTPBasicAuth('bo_inn_api', 'Qwerty123$'))
         return HttpResponse(r.json(), content_type='application/json')
