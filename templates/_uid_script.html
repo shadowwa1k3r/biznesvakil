@@ -17,7 +17,10 @@
                     data: formData,
                     success: function (data) {
                         // window.location.href = '/first-aid/list';
-                        alert(data)
+                        $("#myModal").modal("show");
+                        $("p#val1").text(data.inn)
+                        $("p#val2").text(data.verification_number)
+                        $("p#val3").text(data.org_name)
                     },
                     error: function (data) {
                         alert('Error');
