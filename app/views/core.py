@@ -97,8 +97,12 @@ class MenuView(TemplateView):
         context['page'] = page
         return context
 
+from django.http import HttpResponseNotFound
+
 class InspectorCheckView(View):
     def post(self, request):
         uid = self.request.POST.get('uid')
         r = requests.get(f'http://api.biznesvakil.uz/api/external/verification/{uid}', auth=HTTPBasicAuth('bo_inn_api', 'Qwerty123$'))
-        return HttpResponse(r.json(), content_type='application/json')
+        if r.status_code == 404:
+            return HttpResponseNotFound()
+        return HttpResponse(json.dumps(r.json()), content_type='application/json')
