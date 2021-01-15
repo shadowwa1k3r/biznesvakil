@@ -19,7 +19,14 @@
                         // window.location.href = '/first-aid/list';
                         $("#myModal").modal("show");
                         $("p#val1").text(data.inn)
-                        $("p#val2").text(data.status)
+                        if(data.status.toLowerCase().indexOf("келишилди") === -1){
+                            $("p#val2").text("Не согласовано")
+                        }
+                        else{
+                            
+                            $("p#val2").text("Согласовано")
+                        }
+                        
                         
                     },
                     error: function (data) {
