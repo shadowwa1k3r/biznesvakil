@@ -127,10 +127,10 @@
 
                         </div>
                         <div class="side-quote">
-                            <h4>Проверка инспектора</h4>
+                            <h4>Сведения о проверках</h4>
                             <form>
                                 <div class="form-group">
-                                    <input type="text" name="uid" class="form-control" id="uid" placeholder="Код инспектора">
+                                    <input type="text" name="uid" class="form-control" id="uid" placeholder="ИНН">
                                 </div>
                                 
                                 <button data-url="{% url 'inspector.check' %}" id="uid-send" type="submit" class="btn btn-primary" style="margin:0 auto; display:table; width:50%">Проверить</button>
@@ -608,12 +608,12 @@
                 <div class="modal-body">
                     <form class="form" role="form" id="myForm">
                         <div class="form-row">
-                            <label for="val1" class="col-lg-2 control-label">ИНН: </label>
-                            <div class="col-lg-10">
+                            <label for="val1" class="col-lg-4 control-label">ИНН: </label>
+                            <div class="col-lg-8">
                                 <p id="val1"></p>
                             </div>
-                            <label for="val2" class="col-lg-2 control-label">Регистрация в единой системе: </label>
-                            <div class="col-lg-10">
+                            <label for="val2" class="col-lg-4 control-label">Регистрация в единой системе: </label>
+                            <div class="col-lg-8">
                                 <p id="val2"></p>
                             </div>
                         </div>
