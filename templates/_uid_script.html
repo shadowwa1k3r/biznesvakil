@@ -18,8 +18,8 @@
                     success: function (data) {
                         // window.location.href = '/first-aid/list';
                         $("#myModal").modal("show");
-                        $("p#val1").text(data.inn)
-                        if(data.status.toLowerCase().indexOf("келишилди") === -1){
+                        $("p#val1").text(data[0].inn)
+                        if(data[0].status.toLowerCase().indexOf("келишилди") === -1){
                             $("p#val2").text("Не зарегистрировано")
                         }
                         else{
